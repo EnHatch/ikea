@@ -325,7 +325,7 @@
 - (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     NSLog(@"Results: %@", results);
 
