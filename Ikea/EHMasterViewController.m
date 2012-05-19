@@ -9,6 +9,7 @@
 #import "EHMasterViewController.h"
 
 #import "EHDetailViewController.h"
+#import "EHBarCodeViewController.h"
 
 @interface EHMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -45,6 +46,8 @@
 
   UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
   self.navigationItem.rightBarButtonItem = addButton;
+    
+    [self pushBarCodeScanner];
 }
 
 - (void)viewDidUnload
@@ -247,6 +250,13 @@
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+}
+
+//push barcode scanner view
+-(void) pushBarCodeScanner
+{
+    EHBarCodeViewController *vc = [[EHBarCodeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 @end

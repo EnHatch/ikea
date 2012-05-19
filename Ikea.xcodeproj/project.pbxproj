@@ -17,6 +17,8 @@
 		2A25614D1568187B008A5292 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A25614C1568187B008A5292 /* CoreVideo.framework */; };
 		2A25614F15681884008A5292 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A25614E15681884008A5292 /* QuartzCore.framework */; };
 		2A25615115681891008A5292 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A25615015681891008A5292 /* libiconv.dylib */; };
+		2A25615515681985008A5292 /* EHBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A25615315681985008A5292 /* EHBarCodeViewController.m */; };
+		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -78,6 +80,9 @@
 		2A25614C1568187B008A5292 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		2A25614E15681884008A5292 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2A25615015681891008A5292 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		2A25615215681985008A5292 /* EHBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHBarCodeViewController.h; sourceTree = "<group>"; };
+		2A25615315681985008A5292 /* EHBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHBarCodeViewController.m; sourceTree = "<group>"; };
+		2A25615415681985008A5292 /* EHBarCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHBarCodeViewController.xib; sourceTree = "<group>"; };
 		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -254,8 +259,11 @@
 				42E4AB83156813770089B3D3 /* EHMasterViewController.m */,
 				42E4AB85156813770089B3D3 /* EHDetailViewController.h */,
 				42E4AB86156813770089B3D3 /* EHDetailViewController.m */,
+				2A25615215681985008A5292 /* EHBarCodeViewController.h */,
+				2A25615315681985008A5292 /* EHBarCodeViewController.m */,
 				42E4AB88156813770089B3D3 /* EHMasterViewController.xib */,
 				42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */,
+				2A25615415681985008A5292 /* EHBarCodeViewController.xib */,
 				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
 				42E4AB74156813770089B3D3 /* Supporting Files */,
 			);
@@ -371,6 +379,7 @@
 				2A25614515681828008A5292 /* zbar-help.html in Resources */,
 				2A25614615681828008A5292 /* zbar-helpicons.png in Resources */,
 				2A25614715681828008A5292 /* zbar-samples.png in Resources */,
+				2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +419,7 @@
 				42E4AB81156813770089B3D3 /* Ikea.xcdatamodeld in Sources */,
 				42E4AB84156813770089B3D3 /* EHMasterViewController.m in Sources */,
 				42E4AB87156813770089B3D3 /* EHDetailViewController.m in Sources */,
+				2A25615515681985008A5292 /* EHBarCodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
