@@ -391,7 +391,6 @@
 		2A25615315681985008A5292 /* EHBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHBarCodeViewController.m; sourceTree = "<group>"; };
 		2A25615415681985008A5292 /* EHBarCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHBarCodeViewController.xib; sourceTree = "<group>"; };
 		2A25615B156820E6008A5292 /* Furniture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Furniture.plist; path = Resources/Data/Furniture.plist; sourceTree = SOURCE_ROOT; };
-		2A2561A8156829BC008A5292 /* barcodeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcodeicon.png; sourceTree = "<group>"; };
 		2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCustomTableCell.xib; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
@@ -1439,7 +1438,6 @@
 		2A2561A7156829AC008A5292 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2A2561A8156829BC008A5292 /* barcodeicon.png */,
 			);
 			name = UI;
 			sourceTree = "<group>";

@@ -20,6 +20,7 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize furnitureList = _furnitureList;
 
 #pragma mark - Initialization
 
@@ -28,6 +29,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
     self.title = NSLocalizedString(@"Master", @"Master");
+        NSDictionary *furniturePlist = [NSDictionary dictionaryWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Furniture"ofType:@"plist"]];        
+        self.furnitureList = [furniturePlist objectForKey: @"items"];
     }
     return self;
 }
@@ -128,7 +131,7 @@
 {
 //  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
 //  return [sectionInfo numberOfObjects];
-    return 10;
+    return [self.furnitureList count];
 }
 
 // Customize the appearance of table view cells.
@@ -154,7 +157,9 @@
     if (!productIV) {productIV = (UIImageView*)[cell viewWithTag:1]; }
     if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
     
-    productLabel.text = @"Product Name";
+    NSDictionary *item = [self.furnitureList objectAtIndex:indexPath.row];
+    
+    productLabel.text = [item objectForKey:@"Name"];
     productIV.image = [UIImage imageNamed:@"barcodeicon.png"];
     
     return cell;
