@@ -10,6 +10,7 @@
 
 #import "EHDetailViewController.h"
 #import "EHBarCodeViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface EHMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -158,6 +159,7 @@
     if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
     
     NSDictionary *item = [self.furnitureList objectAtIndex:indexPath.row];
+    [productIV setImageWithURL:[NSURL URLWithString:[item objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
     
     productLabel.text = [item objectForKey:@"Name"];
     productIV.image = [UIImage imageNamed:@"barcodeicon.png"];
