@@ -10,6 +10,8 @@
 		42801C4315681AA20017CCDC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42801C4215681AA20017CCDC /* OpenGLES.framework */; };
 		42801C4515681AB20017CCDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42801C4415681AB20017CCDC /* QuartzCore.framework */; };
 		42801C4A15681C770017CCDC /* CubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42801C4915681C770017CCDC /* CubeView.m */; };
+		4292C0D215682F4B0069B518 /* PODModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C0D115682F4B0069B518 /* PODModelView.m */; };
+		4292C0D61568333C0069B518 /* Isgl3dIkeaCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C0D41568324E0069B518 /* Isgl3dIkeaCameraController.m */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -328,6 +330,10 @@
 		42801C4415681AB20017CCDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		42801C4815681C770017CCDC /* CubeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeView.h; sourceTree = "<group>"; };
 		42801C4915681C770017CCDC /* CubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeView.m; sourceTree = "<group>"; };
+		4292C0D015682F4B0069B518 /* PODModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PODModelView.h; sourceTree = "<group>"; };
+		4292C0D115682F4B0069B518 /* PODModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PODModelView.m; sourceTree = "<group>"; };
+		4292C0D31568324E0069B518 /* Isgl3dIkeaCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isgl3dIkeaCameraController.h; sourceTree = "<group>"; };
+		4292C0D41568324E0069B518 /* Isgl3dIkeaCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Isgl3dIkeaCameraController.m; sourceTree = "<group>"; };
 		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1238,8 +1244,6 @@
 		42E4AB5C156813770089B3D3 = {
 			isa = PBXGroup;
 			children = (
-				42801C4415681AB20017CCDC /* QuartzCore.framework */,
-				42801C4215681AA20017CCDC /* OpenGLES.framework */,
 				42E4B206156814F10089B3D3 /* Libraries */,
 				42E4AB73156813770089B3D3 /* Ikea */,
 				42E4AB9B156813770089B3D3 /* IkeaTests */,
@@ -1260,6 +1264,8 @@
 		42E4AB6A156813770089B3D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42801C4415681AB20017CCDC /* QuartzCore.framework */,
+				42801C4215681AA20017CCDC /* OpenGLES.framework */,
 				42E4AB6B156813770089B3D3 /* UIKit.framework */,
 				42E4AB6D156813770089B3D3 /* Foundation.framework */,
 				42E4AB6F156813770089B3D3 /* CoreGraphics.framework */,
@@ -2908,11 +2914,15 @@
 		42E4B6861568160B0089B3D3 /* isgl3d */ = {
 			isa = PBXGroup;
 			children = (
+				4292C0D31568324E0069B518 /* Isgl3dIkeaCameraController.h */,
+				4292C0D41568324E0069B518 /* Isgl3dIkeaCameraController.m */,
 				42E4B687156817F60089B3D3 /* FurnitureAssemblyViewController.h */,
 				42E4B688156817F60089B3D3 /* FurnitureAssemblyViewController.mm */,
 				42E4B689156817F60089B3D3 /* FurnitureAssemblyViewController.xib */,
 				42801C4815681C770017CCDC /* CubeView.h */,
 				42801C4915681C770017CCDC /* CubeView.m */,
+				4292C0D015682F4B0069B518 /* PODModelView.h */,
+				4292C0D115682F4B0069B518 /* PODModelView.m */,
 			);
 			name = isgl3d;
 			sourceTree = "<group>";
@@ -3324,6 +3334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4292C0D61568333C0069B518 /* Isgl3dIkeaCameraController.m in Sources */,
 				42E4AB7A156813770089B3D3 /* main.m in Sources */,
 				42E4AB7E156813770089B3D3 /* EHAppDelegate.m in Sources */,
 				42E4AB81156813770089B3D3 /* Ikea.xcdatamodeld in Sources */,
@@ -3331,6 +3342,7 @@
 				42E4AB87156813770089B3D3 /* EHDetailViewController.m in Sources */,
 				42E4B68A156817F60089B3D3 /* FurnitureAssemblyViewController.mm in Sources */,
 				42801C4A15681C770017CCDC /* CubeView.m in Sources */,
+				4292C0D215682F4B0069B518 /* PODModelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

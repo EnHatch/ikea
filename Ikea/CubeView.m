@@ -36,6 +36,8 @@
 
   if ((self = [super init])) {
 
+    [self.scene clearAll];
+
     // Translate the camera
     Isgl3dLookAtCamera *standardCamera = (Isgl3dLookAtCamera *)self.defaultCamera;
     standardCamera.eyePosition = Isgl3dVector3Make(0.0f, 3.0f, 8.0f);
@@ -56,6 +58,9 @@
 #pragma mark - Cleanup
 
 - (void) dealloc {
+  NSLog(@"CubeView dealloc");
+  //[self.scene clearAll];
+
   [super dealloc];
 }
 

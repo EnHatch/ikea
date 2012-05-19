@@ -12,6 +12,8 @@
 
 #import "CubeView.h"
 
+#define GL_VIEW_TAG 1337
+
 @interface FurnitureAssemblyViewController ()
 
 @end
@@ -19,6 +21,7 @@
 @implementation FurnitureAssemblyViewController
 
 @synthesize modelWrapper = _modelWrapper;
+@synthesize podModelView = _podModelView;
 
 #pragma mark - Initialization
 
@@ -48,7 +51,9 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+
+    [[Isgl3dDirector sharedInstance] end];
+    [[self.view viewWithTag: GL_VIEW_TAG] removeFromSuperview];
 }
 
 #pragma mark - 3D
@@ -57,18 +62,16 @@
   Isgl3dView *view = [CubeView view];
   view.displayFPS = YES;
   [[Isgl3dDirector sharedInstance] addView:view];
+  
+  self.podModelView = view;
 }
 
 - (void)init3d {
   // Instantiate the Isgl3dDirector and set background color
-  //[Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
+  [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
 
   // Set the director to display the FPS
   //[Isgl3dDirector sharedInstance].displayFPS = YES; 
-
-  // Create the UIViewController
-  //_viewController = [[Isgl3dViewController alloc] initWithNibName:nil bundle:nil];
-  //_viewController.wantsFullScreenLayout = YES;
 
   // Create OpenGL view (here for OpenGL ES 1.1)
   CGRect modelFrame = self.modelWrapper.frame;
@@ -78,11 +81,12 @@
   modelFrame.size.width,
   modelFrame.size.height);
   Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1: modelFrame];
+  glView.tag = GL_VIEW_TAG;
   // Set view in director
   [Isgl3dDirector sharedInstance].openGLView = glView;
 
   // Enable retina display : uncomment if desired
-  //  [[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
+  [[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
 
   // Set the animation frame rate
   [[Isgl3dDirector sharedInstance] setAnimationInterval:1.0/60];
@@ -107,5 +111,15 @@
 }
 
 #pragma mark - Cleanup
+
+- (void) dealloc {
+  NSLog(@"FurnitureAssemblyViewController dealloc");
+
+  //self.podModelView = nil;
+  [[Isgl3dDirector sharedInstance] end];
+
+  [super dealloc];
+}
+
 
 @end

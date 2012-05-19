@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "isgl3d.h"
+
 @interface FurnitureAssemblyViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIView *modelWrapper;
+
+//@property (nonatomic, retain) PODModelView *podModelView;
+@property (nonatomic, retain) Isgl3dBasic3DView *podModelView;
 
 @end

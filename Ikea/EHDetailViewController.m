@@ -73,6 +73,7 @@
   FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
   [self.navigationController pushViewController: fvc
                                       animated: YES];
+  [fvc release];
 }
 
 #pragma mark - Rotate
