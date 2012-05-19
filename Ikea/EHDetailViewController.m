@@ -10,6 +10,8 @@
 
 #import "FurnitureAssemblyViewController.h"
 
+#import "UIImageView+AFNetworking.h"
+
 @interface EHDetailViewController ()
 - (void)configureView;
 @end
@@ -90,6 +92,8 @@
     }
     
     self.detailsTV.text = description;
+    
+    [self.productIV setImageWithURL:[NSURL URLWithString:[self.product objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
 }
 
 - (void)viewDidUnload
