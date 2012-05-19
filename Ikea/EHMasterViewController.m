@@ -203,6 +203,8 @@
 
     //NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     //self.detailViewController.detailItem = object;
+    
+    self.detailViewController.product = [self.furnitureList objectAtIndex:indexPath.row];
 
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }

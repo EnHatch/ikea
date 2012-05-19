@@ -20,6 +20,7 @@
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
 @synthesize assemblyButton = _assemblyButton;
+@synthesize product = _product;
 
 #pragma mark - Initialization
 
@@ -75,6 +76,20 @@
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
 
+    self.navigationItem.title = [self.product objectForKey:@"Name"];
+    
+    NSString *detail = [self.product objectForKey:@"Detail"];
+    
+    NSArray *details = [detail componentsSeparatedByString:@"~"];
+    
+    NSString *description = @"";
+    for (NSString *string in details)
+    {
+        string = [string stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+        description = [NSString stringWithFormat:@"%@%@\n", description, string];
+    }
+    
+    self.detailsTV.text = description;
 }
 
 - (void)viewDidUnload
