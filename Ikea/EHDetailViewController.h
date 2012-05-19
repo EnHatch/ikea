@@ -15,6 +15,9 @@
 @property (strong, nonatomic) IBOutlet UITextView *detailsTV;
 @property (strong, nonatomic) IBOutlet UIImageView *productIV;
 
--(IBAction)pushPodViewer:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *assemblyButton;
+
+- (IBAction)assemblyButtonWasPressed:(id)sender;
+- (IBAction)pushPodViewer:(id)sender;
 
 @end
