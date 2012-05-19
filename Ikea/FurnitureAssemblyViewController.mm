@@ -169,6 +169,11 @@
   NSLog(@"FurnitureAssemblyViewController dealloc");
 
   //self.podModelView = nil;
+  self.nextButton = nil;
+  self.prevButton = nil;
+  self.playButton = nil;
+  self.infoButton = nil;
+
   [[Isgl3dDirector sharedInstance] end];
 
   [super dealloc];
