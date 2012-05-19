@@ -41,24 +41,38 @@
 						<reference key="NSNextResponder" ref="609106242"/>
 						<int key="NSvFlags">256</int>
 						<array class="NSMutableArray" key="NSSubviews">
+							<object class="IBUIView" id="629969723">
+								<reference key="NSNextResponder" ref="201233327"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrameSize">{320, 53}</string>
+								<reference key="NSSuperview" ref="201233327"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="530254167"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<object class="NSColor" key="IBUIBackgroundColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4wMjM1Mjk0MTE3NiAwLjQwNzg0MzEzNzMgMC45Mjk0MTE3NjQ3AA</bytes>
+								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							</object>
 							<object class="IBUIView" id="530254167">
 								<reference key="NSNextResponder" ref="201233327"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrameSize">{320, 44}</string>
+								<string key="NSFrame">{{0, 4}, {320, 49}}</string>
 								<reference key="NSSuperview" ref="201233327"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="468661652"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MC4wMTU2ODYyNzQ1MSAwLjQxNTY4NjI3NDUgMC45Mjk0MTE3NjQ3AA</bytes>
+									<bytes key="NSRGB">MSAxIDEAA</bytes>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 							<object class="IBUIImageView" id="468661652">
 								<reference key="NSNextResponder" ref="201233327"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{7, 4}, {35, 35}}</string>
+								<string key="NSFrame">{{9, 9}, {35, 35}}</string>
 								<reference key="NSSuperview" ref="201233327"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="275906316"/>
@@ -70,7 +84,7 @@
 							<object class="IBUILabel" id="275906316">
 								<reference key="NSNextResponder" ref="201233327"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{55, 11}, {254, 21}}</string>
+								<string key="NSFrame">{{55, 15}, {254, 21}}</string>
 								<reference key="NSSuperview" ref="201233327"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView"/>
@@ -88,7 +102,7 @@
 								<string key="IBUIText">Label</string>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MSAxIDEAA</bytes>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
 								</object>
 								<object class="NSColor" key="IBUIHighlightedColor">
 									<int key="NSColorSpace">3</int>
@@ -107,10 +121,10 @@
 								</object>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 43}</string>
+						<string key="NSFrameSize">{320, 52}</string>
 						<reference key="NSSuperview" ref="609106242"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="530254167"/>
+						<reference key="NSNextKeyView" ref="629969723"/>
 						<string key="NSReuseIdentifierKey">_NS:11</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -123,7 +137,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 44}</string>
+				<string key="NSFrameSize">{320, 53}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="201233327"/>
@@ -134,6 +148,7 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIContentView" ref="201233327"/>
+				<real value="53" key="IBUIRowHeight"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -161,20 +176,27 @@
 						<int key="objectID">3</int>
 						<reference key="object" ref="609106242"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="468661652"/>
 							<reference ref="275906316"/>
 							<reference ref="530254167"/>
+							<reference ref="629969723"/>
+							<reference ref="468661652"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">4</int>
-						<reference key="object" ref="468661652"/>
+						<int key="objectID">5</int>
+						<reference key="object" ref="275906316"/>
 						<reference key="parent" ref="609106242"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="275906316"/>
+						<int key="objectID">7</int>
+						<reference key="object" ref="629969723"/>
+						<array class="NSMutableArray" key="children"/>
+						<reference key="parent" ref="609106242"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">4</int>
+						<reference key="object" ref="468661652"/>
 						<reference key="parent" ref="609106242"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -192,12 +214,13 @@
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">6</int>
+			<int key="maxID">7</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

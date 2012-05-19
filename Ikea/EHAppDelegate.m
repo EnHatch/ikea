@@ -10,6 +10,8 @@
 
 #import "EHMasterViewController.h"
 
+
+
 @implementation EHAppDelegate
 
 @synthesize window = _window;
@@ -36,6 +38,7 @@
   EHMasterViewController *masterViewController = [[[EHMasterViewController alloc] initWithNibName:@"EHMasterViewController" bundle:nil] autorelease];
   self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
   masterViewController.managedObjectContext = self.managedObjectContext;
+    
   self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
     return YES;
