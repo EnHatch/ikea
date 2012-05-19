@@ -17,6 +17,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *assemblyButton;
 
+@property (strong, nonatomic) NSDictionary *product;
+
 - (IBAction)assemblyButtonWasPressed:(id)sender;
 
 @end
