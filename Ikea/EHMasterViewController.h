@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "ZBarSDK.h"
 
 @class EHDetailViewController;
 
-#import <CoreData/CoreData.h>
-
-@interface EHMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface EHMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, ZBarReaderDelegate>
 
 @property (strong, nonatomic) EHDetailViewController *detailViewController;
 
