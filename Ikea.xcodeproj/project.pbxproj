@@ -21,7 +21,7 @@
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
 		2A2561A9156829BC008A5292 /* barcodeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561A8156829BC008A5292 /* barcodeicon.png */; };
-		2A2561AF15682FA7008A5292 /* hammericon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561AE15682FA7008A5292 /* hammericon2.png */; };
+		2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -88,7 +88,7 @@
 		2A25615415681985008A5292 /* EHBarCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHBarCodeViewController.xib; sourceTree = "<group>"; };
 		2A25615B156820E6008A5292 /* Furniture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Furniture.plist; path = Resources/Data/Furniture.plist; sourceTree = SOURCE_ROOT; };
 		2A2561A8156829BC008A5292 /* barcodeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcodeicon.png; sourceTree = "<group>"; };
-		2A2561AE15682FA7008A5292 /* hammericon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hammericon2.png; sourceTree = "<group>"; };
+		2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCustomTableCell.xib; sourceTree = "<group>"; };
 		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -240,7 +240,6 @@
 		2A2561A7156829AC008A5292 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				2A2561AE15682FA7008A5292 /* hammericon2.png */,
 				2A2561A8156829BC008A5292 /* barcodeicon.png */,
 			);
 			name = UI;
@@ -298,6 +297,7 @@
 				42E4AB88156813770089B3D3 /* EHMasterViewController.xib */,
 				42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */,
 				2A25615415681985008A5292 /* EHBarCodeViewController.xib */,
+				2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */,
 				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
 				42E4AB74156813770089B3D3 /* Supporting Files */,
 			);
@@ -416,6 +416,7 @@
 				2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */,
 				2A25615C156820E6008A5292 /* Furniture.plist in Resources */,
 				2A2561A9156829BC008A5292 /* barcodeicon.png in Resources */,
+				2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +425,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E4ABA0156813780089B3D3 /* InfoPlist.strings in Resources */,
-				2A2561AF15682FA7008A5292 /* hammericon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

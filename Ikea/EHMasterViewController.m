@@ -52,8 +52,6 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barcodeicon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(pushBarCodeScanner:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
-    
-    [self pushDetailView];
 
     
 }
@@ -93,13 +91,15 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-  return [[self.fetchedResultsController sections] count];
+  //return [[self.fetchedResultsController sections] count];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-  return [sectionInfo numberOfObjects];
+//  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+//  return [sectionInfo numberOfObjects];
+    return 10;
 }
 
 // Customize the appearance of table view cells.
@@ -107,13 +107,27 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
+    UIImageView *productIV = nil;
+    UILabel *productLabel = nil;
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+       // cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
+       // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"EHCustomTableCell" owner:self options:nil];
+        cell = (UITableViewCell *) [objects objectAtIndex: 0];
+        
     }
-
-  [self configureCell:cell atIndexPath:indexPath];
+    
+    //[self configureCell:cell atIndexPath:indexPath];
+    
+    if (!productIV) {productIV = (UIImageView*)[cell viewWithTag:1]; }
+    if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
+    
+    productLabel.text = @"Product Name";
+    productIV.image = [UIImage imageNamed:@"barcodeicon.png"];
+    
     return cell;
 }
 
