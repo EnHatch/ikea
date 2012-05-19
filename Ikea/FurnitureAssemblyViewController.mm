@@ -23,6 +23,12 @@
 
 @synthesize modelWrapper = _modelWrapper;
 @synthesize podModelView = _podModelView;
+@synthesize animating = _animating;
+
+@synthesize nextButton = _nextButton;
+@synthesize prevButton = _prevButton;
+@synthesize playButton = _playButton;
+@synthesize infoButton = _infoButton;
 
 #pragma mark - Initialization
 
@@ -72,7 +78,18 @@
 }
 
 - (IBAction)playButtonWasPressed:(id)sender {
-    [self.podModelView toggleAnimation];
+    [self toggleAnimation];
+}
+
+#pragma mark - Animation
+
+- (void)toggleAnimation {
+    if (self.isAnimating) {
+        [self.podModelView pauseAnimation];
+    } else {
+        [self.podModelView startAnimation];
+    }
+    self.animating = !self.isAnimating;
 }
 
 #pragma mark - 3D
@@ -82,10 +99,10 @@
   Isgl3dView *view = [CubeView view];
 #else
 
-  NSArray *modelNames = [NSArray arrayWithObjects: 
+  NSArray *modelNames = [NSArray arrayWithObjects:
   @"step1_n.pod",
   @"step2_n.pod",
-  //@"man.pod", 
+  //@"man.pod",
   nil];
 
   PODModelView *view = [[PODModelView alloc] initWithModelNames:modelNames];
@@ -93,45 +110,50 @@
 
   view.displayFPS = YES;
   [[Isgl3dDirector sharedInstance] addView:view];
-  
+
   self.podModelView = view;
 }
 
 - (void)init3d {
-  // Instantiate the Isgl3dDirector and set background color
-  [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
+    // Instantiate the Isgl3dDirector and set background color
+    [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff";
 
-  // Set the director to display the FPS
-  //[Isgl3dDirector sharedInstance].displayFPS = YES; 
+    // Set the director to display the FPS
+    //[Isgl3dDirector sharedInstance].displayFPS = YES;
 
-  // Create OpenGL view (here for OpenGL ES 1.1)
-  CGRect modelFrame = self.modelWrapper.frame;
-  NSLog(@"3d frame: %f, %f, %f, %f",
-  modelFrame.origin.x,
-  modelFrame.origin.y,
-  modelFrame.size.width,
-  modelFrame.size.height);
-  Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1: modelFrame];
-  glView.tag = GL_VIEW_TAG;
-  // Set view in director
-  [Isgl3dDirector sharedInstance].openGLView = glView;
+    // Create OpenGL view (here for OpenGL ES 1.1)
+    CGRect modelFrame = self.modelWrapper.frame;
+    NSLog(@"3d frame: %f, %f, %f, %f",
+    modelFrame.origin.x,
+    modelFrame.origin.y,
+    modelFrame.size.width,
+    modelFrame.size.height);
+    Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1: modelFrame];
+    glView.tag = GL_VIEW_TAG;
+    // Set view in director
+    [Isgl3dDirector sharedInstance].openGLView = glView;
 
-  // Enable retina display : uncomment if desired
-  [[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
+    // Enable retina display : uncomment if desired
+    [[Isgl3dDirector sharedInstance] enableRetinaDisplay:YES];
 
-  // Set the animation frame rate
-  [[Isgl3dDirector sharedInstance] setAnimationInterval:1.0/60];
+    // Set the animation frame rate
+    [[Isgl3dDirector sharedInstance] setAnimationInterval:1.0/60];
 
-  // Add the OpenGL view to the view controller
-  //_view = [glView retain];
-  //self.view = glView;
-  [self.view addSubview: glView];
+    [glView addSubview:self.nextButton];
+    [glView addSubview:self.prevButton];
+    [glView addSubview:self.playButton];
+    [glView addSubview:self.infoButton];
 
-  // Creates the view(s) and adds them to the director
-  [self createViews];
+    // Add the OpenGL view to the view controller
+    //_view = [glView retain];
+    //self.view = glView;
+    [self.view addSubview: glView];
 
-  // Run the director
-  [[Isgl3dDirector sharedInstance] run];
+    // Creates the view(s) and adds them to the director
+    [self createViews];
+
+    // Run the director
+    [[Isgl3dDirector sharedInstance] run];
 }
 
 #pragma mark - Rotation
@@ -147,6 +169,11 @@
   NSLog(@"FurnitureAssemblyViewController dealloc");
 
   //self.podModelView = nil;
+  self.nextButton = nil;
+  self.prevButton = nil;
+  self.playButton = nil;
+  self.infoButton = nil;
+
   [[Isgl3dDirector sharedInstance] end];
 
   [super dealloc];

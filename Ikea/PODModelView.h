@@ -25,6 +25,9 @@
 - (void)loadPrev;
 
 - (void)toggleCaption;
-- (void)toggleAnimation;
+
+- (void)pauseAnimation;
+- (void)startAnimation;
+- (void)rewindAnimation;
 
 @end
