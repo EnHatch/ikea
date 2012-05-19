@@ -20,7 +20,6 @@
 		2A25615515681985008A5292 /* EHBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A25615315681985008A5292 /* EHBarCodeViewController.m */; };
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
-		2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		4292C630156843E90069B518 /* libisgl3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4292C5EB156843DA0069B518 /* libisgl3d.a */; };
@@ -36,6 +35,7 @@
 		42BD55EB1568584B00886F9D /* barcodebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD55E81568584B00886F9D /* barcodebtn.png */; };
 		42BD55EC1568584B00886F9D /* barcodeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD55E91568584B00886F9D /* barcodeicon.png */; };
 		42BD55ED1568584B00886F9D /* ikeanavbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD55EA1568584B00886F9D /* ikeanavbar.png */; };
+		42BD570C15685C8800886F9D /* EHCustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -3500,9 +3500,8 @@
 				2A25614615681828008A5292 /* zbar-helpicons.png in Resources */,
 				2A25614715681828008A5292 /* zbar-samples.png in Resources */,
 				2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */,
-				2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */,
+				42BD570C15685C8800886F9D /* EHCustomTableCell.xib in Resources */,
 				2A25615C156820E6008A5292 /* Furniture.plist in Resources */,
-				2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */,
 				4292C63C156844760069B518 /* FurnitureAssemblyViewController.xib in Resources */,
 				425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */,
 				425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */,

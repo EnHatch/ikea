@@ -19,7 +19,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
--(IBAction)pushBarCodeScanner:(id)sender;
--(void) pushDetailView;
+- (IBAction)pushDetailView;
+- (IBAction)loadModalBarCodeScanner;
 
 @end

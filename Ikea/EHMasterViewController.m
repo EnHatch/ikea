@@ -302,6 +302,7 @@
  */
 
 #pragma mark - UI Callbacks
+
 - (IBAction)pushDetailView
 {
     EHDetailViewController *vc = [[EHDetailViewController alloc] init];
