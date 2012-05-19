@@ -19,7 +19,6 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
 @synthesize assemblyButton = _assemblyButton;
 
 #pragma mark - Initialization
