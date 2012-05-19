@@ -14,6 +14,10 @@
 
 @implementation EHBarCodeViewController
 
+@synthesize capturedImageView = _capturedImageView;
+@synthesize barcodeLabel = _barcodeLabel;
+@synthesize typeLabel = _typeLabel;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -51,20 +55,28 @@
     vc.readerView.zoom = 1.0;
     
     [self presentModalViewController:vc animated:YES];
-    
 }
 
 //zbarcode scanner delegate methods
 - (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
-    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     NSLog(@"Results: %@", results);
+
+    for(ZBarSymbol *symbol in results) {
+        NSLog(@"symbol type: %@", symbol.typeName);
+        NSLog(@"symbol data: %@", symbol.data);
+
+        self.capturedImageView.image = image;
+        self.barcodeLabel.text = symbol.data;
+        self.typeLabel.text = symbol.typeName;
+    // process result
+    }
     
     [reader dismissModalViewControllerAnimated:YES];
-    
-    [self.navigationController popViewControllerAnimated:NO];
+    //[self.navigationController popViewControllerAnimated:NO];
 }
 
 @end

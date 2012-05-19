@@ -12,6 +12,10 @@
 
 @interface EHBarCodeViewController : UIViewController <ZBarReaderDelegate>
 
+@property (nonatomic, retain) IBOutlet UIImageView *capturedImageView;
+@property (nonatomic, retain) IBOutlet UILabel *barcodeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *typeLabel;
+
 -(void) loadBarCodeScanner;
 
 @end
