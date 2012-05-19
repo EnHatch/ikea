@@ -13,6 +13,8 @@
 		4292C0D215682F4B0069B518 /* PODModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C0D115682F4B0069B518 /* PODModelView.m */; };
 		4292C0D61568333C0069B518 /* Isgl3dIkeaCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C0D41568324E0069B518 /* Isgl3dIkeaCameraController.m */; };
 		4292C0DD156837F00069B518 /* man.pod in Resources */ = {isa = PBXBuildFile; fileRef = 4292C0DC156837F00069B518 /* man.pod */; };
+		4292C17515683E8C0069B518 /* bone_texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4292C17415683E8C0069B518 /* bone_texture.jpg */; };
+		4292C17715683E950069B518 /* step1_n.pod in Resources */ = {isa = PBXBuildFile; fileRef = 4292C17615683E950069B518 /* step1_n.pod */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -336,6 +338,8 @@
 		4292C0D31568324E0069B518 /* Isgl3dIkeaCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isgl3dIkeaCameraController.h; sourceTree = "<group>"; };
 		4292C0D41568324E0069B518 /* Isgl3dIkeaCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Isgl3dIkeaCameraController.m; sourceTree = "<group>"; };
 		4292C0DC156837F00069B518 /* man.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = man.pod; sourceTree = "<group>"; };
+		4292C17415683E8C0069B518 /* bone_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bone_texture.jpg; sourceTree = "<group>"; };
+		4292C17615683E950069B518 /* step1_n.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step1_n.pod; sourceTree = "<group>"; };
 		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1246,6 +1250,7 @@
 		4292C0DB156837F00069B518 /* PODs */ = {
 			isa = PBXGroup;
 			children = (
+				4292C17615683E950069B518 /* step1_n.pod */,
 				4292C0DC156837F00069B518 /* man.pod */,
 			);
 			name = PODs;
@@ -1255,9 +1260,19 @@
 		4292C0DE156837F40069B518 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4292C17315683E8C0069B518 /* Textures */,
 				4292C0DB156837F00069B518 /* PODs */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		4292C17315683E8C0069B518 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				4292C17415683E8C0069B518 /* bone_texture.jpg */,
+			);
+			name = Textures;
+			path = Resources/Textures;
 			sourceTree = "<group>";
 		};
 		42E4AB5C156813770089B3D3 = {
@@ -3321,6 +3336,8 @@
 				42E4AB8D156813770089B3D3 /* EHDetailViewController.xib in Resources */,
 				42E4B68B156817F60089B3D3 /* FurnitureAssemblyViewController.xib in Resources */,
 				4292C0DD156837F00069B518 /* man.pod in Resources */,
+				4292C17515683E8C0069B518 /* bone_texture.jpg in Resources */,
+				4292C17715683E950069B518 /* step1_n.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

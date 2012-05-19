@@ -47,16 +47,20 @@
     _cameraController = nil;
   }
   // Create and configure touch-screen camera controller
-
+#if 0
   CGSize viewSize = self.viewport.size;
   float fovyRadians = Isgl3dMathDegreesToRadians(45.0f);
   Isgl3dPerspectiveProjection *perspectiveLens = [[Isgl3dPerspectiveProjection alloc] initFromViewSize:viewSize fovyRadians:fovyRadians nearZ:1.0f farZ:10000.0f];
   Isgl3dLookAtCamera *cam = [[Isgl3dLookAtCamera alloc] initWithLens:perspectiveLens eyeX:0.0f eyeY:0.0f eyeZ:20.0f centerX:0.0f centerY:0.0f centerZ:0.0f upX:0.0f upY:1.0f upZ:0.0f];
   [perspectiveLens release];
 
+#else
+  Isgl3dNodeCamera *cam = (Isgl3dNodeCamera *)self.defaultCamera;
+#endif
+
   self.activeCamera = cam;
 
-  _cameraController = [[Isgl3dIkeaCameraController alloc] initWithNodeCamera:self.activeCamera andView:self];
+  _cameraController = [[Isgl3dIkeaCameraController alloc] initWithNodeCamera:cam andView:self];
   [cam release];
   _cameraController.doubleTapEnabled = NO;
 
@@ -82,7 +86,8 @@
   [self unschedule];
   [self clearScene];
 
-  Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:modelName];
+  //Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:modelName];
+  Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithResource:modelName];
 
   Isgl3dSkeletonNode *skel = [self.scene createSkeletonNode];
   [podImporter addMeshesToScene: skel];

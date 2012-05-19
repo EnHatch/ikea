@@ -11,6 +11,7 @@
 #import "FurnitureAssemblyViewController.h"
 
 #import "CubeView.h"
+#import "PODModelView.h"
 
 #define GL_VIEW_TAG 1337
 
@@ -59,7 +60,18 @@
 #pragma mark - 3D
 
 - (void)createViews {
+#if 0
   Isgl3dView *view = [CubeView view];
+#else
+
+  NSArray *modelNames = [NSArray arrayWithObjects: 
+  @"step1_n.pod",
+  //@"man.pod", 
+  nil];
+
+  PODModelView *view = [[PODModelView alloc] initWithModelNames:modelNames];
+#endif
+
   view.displayFPS = YES;
   [[Isgl3dDirector sharedInstance] addView:view];
   
