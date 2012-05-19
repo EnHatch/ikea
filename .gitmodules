@@ -1,3 +1,6 @@
 [submodule "Libraries/isgl3d"]
 	path = Libraries/isgl3d
 	url = https://github.com/isgl3d/isgl3d.git
+[submodule "Libraries/AFNetworking"]
+	path = Libraries/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git

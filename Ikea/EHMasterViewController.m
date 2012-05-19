@@ -21,6 +21,8 @@
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 
+#pragma mark - Initialization
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,23 +31,22 @@
     }
     return self;
 }
+
+#pragma mark - Cleanup
 							
 - (void)dealloc
 {
-  [_detailViewController release];
-  [__fetchedResultsController release];
-  [__managedObjectContext release];
+    [_detailViewController release];
+    [__fetchedResultsController release];
+    [__managedObjectContext release];
     [super dealloc];
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-  //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-  //UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
-  //self.navigationItem.rightBarButtonItem = addButton;
     
     UILabel *label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
     label.backgroundColor = [UIColor clearColor];
@@ -61,8 +62,7 @@
     UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [scanButton setFrame:CGRectMake(0, 0, 44, 33)];
     [scanButton setImage:[UIImage imageNamed:@"barcodeicon.png"] forState:UIControlStateNormal];
-    [scanButton addTarget:self action:@selector(pushDetailView) forControlEvents:UIControlEventTouchUpInside];
-
+    [scanButton addTarget:self action:@selector(loadModalBarCodeScanner) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:scanButton];
     self.navigationItem.rightBarButtonItem = rightButton;
@@ -86,6 +86,8 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma mark - CoreData
+
 - (void)insertNewObject:(id)sender
 {
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
@@ -106,7 +108,15 @@
     }
 }
 
-#pragma mark - Table View
+#pragma mark - TableView Util
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+}
+
+#pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -149,6 +159,8 @@
     
     return cell;
 }
+
+#pragma mark - Table View Delegate
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -289,27 +301,43 @@
 }
  */
 
-#pragma mark - TableView DataSource
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
-}
-
 #pragma mark - UI Callbacks
 
-//push barcode scanner view
--(IBAction)pushBarCodeScanner:(id)sender
-{
-    EHBarCodeViewController *vc = [[EHBarCodeViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:NO];
-}
-
--(void) pushDetailView
+- (IBAction)pushDetailView
 {
     EHDetailViewController *vc = [[EHDetailViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)loadModalBarCodeScanner
+{
+    ZBarReaderViewController *vc = [ZBarReaderViewController new];
+    vc.readerDelegate = self;
+    
+    [vc.scanner setSymbology:ZBAR_QRCODE config:ZBAR_CFG_ENABLE to:0];
+    vc.readerView.zoom = 1.0;
+    
+    [self presentModalViewController:vc animated:YES];
+}
+
+#pragma mark - ZBarReaderDelegate
+
+- (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    NSLog(@"Results: %@", results);
+
+    for(ZBarSymbol *symbol in results) {
+        // process result
+        NSLog(@"symbol type: %@", symbol.typeName);
+        NSLog(@"symbol data: %@", symbol.data);
+    }
+    
+    [reader dismissModalViewControllerAnimated:YES];
+    
+    [self pushDetailView];
 }
 
 @end
