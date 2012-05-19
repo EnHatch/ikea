@@ -15,8 +15,10 @@
 @interface FurnitureAssemblyViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIView *modelWrapper;
-
 @property (nonatomic, retain) PODModelView *podModelView;
+
+@property (getter=isAnimating)BOOL animating;
+
 //@property (nonatomic, retain) Isgl3dBasic3DView *podModelView;
 
 - (IBAction)prevButtonWasPressed:(id)sender;

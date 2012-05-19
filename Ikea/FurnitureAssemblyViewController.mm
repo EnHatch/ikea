@@ -23,6 +23,7 @@
 
 @synthesize modelWrapper = _modelWrapper;
 @synthesize podModelView = _podModelView;
+@synthesize animating = _animating;
 
 #pragma mark - Initialization
 
@@ -72,7 +73,18 @@
 }
 
 - (IBAction)playButtonWasPressed:(id)sender {
-    [self.podModelView toggleAnimation];
+    [self toggleAnimation];
+}
+
+#pragma mark - Animation
+
+- (void)toggleAnimation {
+    if (self.isAnimating) {
+        [self.podModelView stopAnimation];
+    } else {
+        [self.podModelView startAnimation];
+    }
+    self.animating = !self.isAnimating;
 }
 
 #pragma mark - 3D
@@ -82,10 +94,10 @@
   Isgl3dView *view = [CubeView view];
 #else
 
-  NSArray *modelNames = [NSArray arrayWithObjects: 
+  NSArray *modelNames = [NSArray arrayWithObjects:
   @"step1_n.pod",
   @"step2_n.pod",
-  //@"man.pod", 
+  //@"man.pod",
   nil];
 
   PODModelView *view = [[PODModelView alloc] initWithModelNames:modelNames];
@@ -93,16 +105,16 @@
 
   view.displayFPS = YES;
   [[Isgl3dDirector sharedInstance] addView:view];
-  
+
   self.podModelView = view;
 }
 
 - (void)init3d {
   // Instantiate the Isgl3dDirector and set background color
-  [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
+  [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff";
 
   // Set the director to display the FPS
-  //[Isgl3dDirector sharedInstance].displayFPS = YES; 
+  //[Isgl3dDirector sharedInstance].displayFPS = YES;
 
   // Create OpenGL view (here for OpenGL ES 1.1)
   CGRect modelFrame = self.modelWrapper.frame;
