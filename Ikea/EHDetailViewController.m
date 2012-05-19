@@ -71,7 +71,7 @@
 
     self.navigationItem.title = @"Product Name";
 
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
 

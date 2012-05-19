@@ -21,8 +21,8 @@
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
 		2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */; };
-		425B4F3E1568467F00CFA829 /* 129x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.png */; };
-		425B4F40156846EA00CFA829 /* 44x26.png in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.png */; };
+		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
+		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		4292C630156843E90069B518 /* libisgl3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4292C5EB156843DA0069B518 /* libisgl3d.a */; };
 		4292C63B156844760069B518 /* FurnitureAssemblyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4292C639156844760069B518 /* FurnitureAssemblyViewController.mm */; };
 		4292C63C156844760069B518 /* FurnitureAssemblyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4292C63A156844760069B518 /* FurnitureAssemblyViewController.xib */; };
@@ -381,8 +381,8 @@
 		2A25615B156820E6008A5292 /* Furniture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Furniture.plist; path = Resources/Data/Furniture.plist; sourceTree = SOURCE_ROOT; };
 		2A2561A8156829BC008A5292 /* barcodeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcodeicon.png; sourceTree = "<group>"; };
 		2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCustomTableCell.xib; sourceTree = "<group>"; };
-		425B4F3D1568467F00CFA829 /* 129x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 129x120.png; sourceTree = "<group>"; };
-		425B4F3F156846EA00CFA829 /* 44x26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 44x26.png; sourceTree = "<group>"; };
+		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
+		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		4292C1E1156843D60069B518 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4292C1E2156843D60069B518 /* buildIsgl3dH.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildIsgl3dH.sh; sourceTree = "<group>"; };
 		4292C1E3156843D60069B518 /* buildTemplatePlist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildTemplatePlist.sh; sourceTree = "<group>"; };
@@ -3007,9 +3007,9 @@
 		4292C643156844A30069B518 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				425B4F3F156846EA00CFA829 /* 44x26.png */,
+				425B4F3F156846EA00CFA829 /* 44x26.jpg */,
 				4292C644156844A30069B518 /* barcodeicon.png */,
-				425B4F3D1568467F00CFA829 /* 129x120.png */,
+				425B4F3D1568467F00CFA829 /* 129x120.jpg */,
 			);
 			name = Images;
 			path = Resources/Images;
@@ -3498,8 +3498,8 @@
 				2A2561B1156838A5008A5292 /* EHCustomTableCell.xib in Resources */,
 				4292C63C156844760069B518 /* FurnitureAssemblyViewController.xib in Resources */,
 				4292C645156844A30069B518 /* barcodeicon.png in Resources */,
-				425B4F3E1568467F00CFA829 /* 129x120.png in Resources */,
-				425B4F40156846EA00CFA829 /* 44x26.png in Resources */,
+				425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */,
+				425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */,
 				42BD5586156847BC00886F9D /* step1_n.pod in Resources */,
 				42BD5587156847BC00886F9D /* step2_n.pod in Resources */,
 				42BD5588156847BC00886F9D /* bone_texture.jpg in Resources */,
