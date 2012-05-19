@@ -10,11 +10,15 @@
 
 #import "FurnitureAssemblyViewController.h"
 
+#import "CubeView.h"
+
 @interface FurnitureAssemblyViewController ()
 
 @end
 
 @implementation FurnitureAssemblyViewController
+
+@synthesize modelWrapper = _modelWrapper;
 
 #pragma mark - Initialization
 
@@ -29,16 +33,16 @@
 
 #pragma mark - View Lifecycle
 
-- (void)loadView
-{
-
-}
-
-//- (void)viewDidLoad
+//- (void)loadView
 //{
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view from its nib.
 //}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    [self init3d];
+}
 
 - (void)viewDidUnload
 {
@@ -49,9 +53,15 @@
 
 #pragma mark - 3D
 
+- (void)createViews {
+  Isgl3dView *view = [CubeView view];
+  view.displayFPS = YES;
+  [[Isgl3dDirector sharedInstance] addView:view];
+}
+
 - (void)init3d {
   // Instantiate the Isgl3dDirector and set background color
-  [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
+  //[Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff"; 
 
   // Set the director to display the FPS
   //[Isgl3dDirector sharedInstance].displayFPS = YES; 
@@ -61,7 +71,13 @@
   //_viewController.wantsFullScreenLayout = YES;
 
   // Create OpenGL view (here for OpenGL ES 1.1)
-  Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1:self.view.bounds];
+  CGRect modelFrame = self.modelWrapper.frame;
+  NSLog(@"3d frame: %f, %f, %f, %f",
+  modelFrame.origin.x,
+  modelFrame.origin.y,
+  modelFrame.size.width,
+  modelFrame.size.height);
+  Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1: modelFrame];
   // Set view in director
   [Isgl3dDirector sharedInstance].openGLView = glView;
 
@@ -73,7 +89,8 @@
 
   // Add the OpenGL view to the view controller
   //_view = [glView retain];
-  self.view = glView;
+  //self.view = glView;
+  [self.view addSubview: glView];
 
   // Creates the view(s) and adds them to the director
   [self createViews];

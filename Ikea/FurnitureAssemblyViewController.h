@@ -10,4 +10,6 @@
 
 @interface FurnitureAssemblyViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIView *modelWrapper;
+
 @end

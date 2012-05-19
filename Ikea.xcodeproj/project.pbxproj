@@ -1147,7 +1147,7 @@
 		42E4B59A156815180089B3D3 /* Isgl3dDemoCameraController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Isgl3dDemoCameraController.h; sourceTree = "<group>"; };
 		42E4B59B156815180089B3D3 /* Isgl3dDemoCameraController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Isgl3dDemoCameraController.m; sourceTree = "<group>"; };
 		42E4B59C156815180089B3D3 /* Isgl3dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Isgl3dViewController.h; sourceTree = "<group>"; };
-		42E4B59D156815180089B3D3 /* Isgl3dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Isgl3dViewController.m; sourceTree = "<group>"; };
+		42E4B59D156815180089B3D3 /* Isgl3dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Isgl3dViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		42E4B59F156815180089B3D3 /* LightingDemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LightingDemoView.h; sourceTree = "<group>"; };
 		42E4B5A0156815180089B3D3 /* LightingDemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LightingDemoView.m; sourceTree = "<group>"; };
 		42E4B5A1156815180089B3D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
