@@ -57,6 +57,24 @@
     [[self.view viewWithTag: GL_VIEW_TAG] removeFromSuperview];
 }
 
+#pragma mark - UI Callbacks
+
+- (IBAction)prevButtonWasPressed:(id)sender {
+    [self.podModelView loadPrev];
+}
+
+- (IBAction)nextButtonWasPressed:(id)sender {
+    [self.podModelView loadNext];
+}
+
+- (IBAction)infoButtonWasPressed:(id)sender {
+    [self.podModelView toggleCaption];
+}
+
+- (IBAction)playButtonWasPressed:(id)sender {
+    [self.podModelView toggleAnimation];
+}
+
 #pragma mark - 3D
 
 - (void)createViews {
@@ -66,6 +84,7 @@
 
   NSArray *modelNames = [NSArray arrayWithObjects: 
   @"step1_n.pod",
+  @"step2_n.pod",
   //@"man.pod", 
   nil];
 

@@ -11,12 +11,20 @@
 
 @interface PODModelView : Isgl3dBasic3DView {
 
-}
+  @private
+      NSInteger _currentIndex;
+
+} 
 
 @property (nonatomic, retain) Isgl3dIkeaCameraController * cameraController;
 @property (nonatomic, retain) NSArray *modelNames;
 
 - (id)initWithModelNames:(NSArray *)modelNames;
 
+- (void)loadNext;
+- (void)loadPrev;
+
+- (void)toggleCaption;
+- (void)toggleAnimation;
 
 @end

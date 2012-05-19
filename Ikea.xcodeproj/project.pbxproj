@@ -31,6 +31,9 @@
 		4292C645156844A30069B518 /* barcodeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4292C644156844A30069B518 /* barcodeicon.png */; };
 		4292C647156844C10069B518 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4292C646156844C10069B518 /* OpenGLES.framework */; };
 		4292C64A156844D00069B518 /* Isgl3dIkeaCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C649156844D00069B518 /* Isgl3dIkeaCameraController.m */; };
+		42BD5586156847BC00886F9D /* step1_n.pod in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5582156847BC00886F9D /* step1_n.pod */; };
+		42BD5587156847BC00886F9D /* step2_n.pod in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5583156847BC00886F9D /* step2_n.pod */; };
+		42BD5588156847BC00886F9D /* bone_texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5585156847BC00886F9D /* bone_texture.jpg */; };
 		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
 		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
 		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
@@ -1240,6 +1243,9 @@
 		4292C646156844C10069B518 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4292C648156844D00069B518 /* Isgl3dIkeaCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isgl3dIkeaCameraController.h; sourceTree = "<group>"; };
 		4292C649156844D00069B518 /* Isgl3dIkeaCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Isgl3dIkeaCameraController.m; sourceTree = "<group>"; };
+		42BD5582156847BC00886F9D /* step1_n.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step1_n.pod; sourceTree = "<group>"; };
+		42BD5583156847BC00886F9D /* step2_n.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step2_n.pod; sourceTree = "<group>"; };
+		42BD5585156847BC00886F9D /* bone_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bone_texture.jpg; sourceTree = "<group>"; };
 		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -1376,6 +1382,8 @@
 		2A25615715682081008A5292 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42BD5581156847BC00886F9D /* PODs */,
+				42BD5584156847BC00886F9D /* Textures */,
 				4292C643156844A30069B518 /* Images */,
 				2A2561A7156829AC008A5292 /* UI */,
 				2A25615815682084008A5292 /* Data */,
@@ -3007,6 +3015,25 @@
 			path = Resources/Images;
 			sourceTree = SOURCE_ROOT;
 		};
+		42BD5581156847BC00886F9D /* PODs */ = {
+			isa = PBXGroup;
+			children = (
+				42BD5582156847BC00886F9D /* step1_n.pod */,
+				42BD5583156847BC00886F9D /* step2_n.pod */,
+			);
+			name = PODs;
+			path = Resources/PODs;
+			sourceTree = SOURCE_ROOT;
+		};
+		42BD5584156847BC00886F9D /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				42BD5585156847BC00886F9D /* bone_texture.jpg */,
+			);
+			name = Textures;
+			path = Resources/Textures;
+			sourceTree = SOURCE_ROOT;
+		};
 		42E4AB5C156813770089B3D3 = {
 			isa = PBXGroup;
 			children = (
@@ -3473,6 +3500,9 @@
 				4292C645156844A30069B518 /* barcodeicon.png in Resources */,
 				425B4F3E1568467F00CFA829 /* 129x120.png in Resources */,
 				425B4F40156846EA00CFA829 /* 44x26.png in Resources */,
+				42BD5586156847BC00886F9D /* step1_n.pod in Resources */,
+				42BD5587156847BC00886F9D /* step2_n.pod in Resources */,
+				42BD5588156847BC00886F9D /* bone_texture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

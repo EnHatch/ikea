@@ -19,4 +19,9 @@
 @property (nonatomic, retain) PODModelView *podModelView;
 //@property (nonatomic, retain) Isgl3dBasic3DView *podModelView;
 
+- (IBAction)prevButtonWasPressed:(id)sender;
+- (IBAction)nextButtonWasPressed:(id)sender;
+- (IBAction)infoButtonWasPressed:(id)sender;
+- (IBAction)playButtonWasPressed:(id)sender;
+
 @end

@@ -39,6 +39,18 @@
   return self;
 }
 
+#pragma mark - Public Methods
+
+- (void)toggleCaption {
+    NSLog(@"toggleCaption");
+
+}
+
+- (void)toggleAnimation {
+    NSLog(@"toggleAnimation");
+
+}
+
 #pragma mark - First Run
 
 - (Isgl3dIkeaCameraController *)createCameraController {
@@ -80,6 +92,26 @@
 }
 
 #pragma mark - Model Loading
+
+- (void)loadPrev {
+  NSLog(@"loadPrev called");
+  if (_currentIndex > 0) {
+    NSLog(@"loadPrev");
+    //[self zeroEverything];
+    _currentIndex--;
+    [self loadModelWithIndex: _currentIndex];
+  }
+}
+
+- (void)loadNext {
+  NSLog(@"loadNext called");
+  if (_currentIndex < self.modelNames.count - 1) {
+    NSLog(@"loadNext");
+    //[self zeroEverything];
+    _currentIndex++;
+    [self loadModelWithIndex: _currentIndex];
+  }
+}
 
 - (void)loadModelWithName:(NSString *)modelName {
   NSLog(@"loading model with filename: %@", modelName);
