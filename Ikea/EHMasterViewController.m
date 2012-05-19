@@ -42,12 +42,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-  self.navigationItem.leftBarButtonItem = self.editButtonItem;
+  //self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-  UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
-  self.navigationItem.rightBarButtonItem = addButton;
+  //UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
+  //self.navigationItem.rightBarButtonItem = addButton;
     
-    [self pushBarCodeScanner];
+    self.navigationItem.title = @"IKEA";
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barcodeicon.png"] style:UIBarButtonItemStylePlain target:self action:@selector(pushBarCodeScanner:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
+    
+    [self pushDetailView];
+
+    
 }
 
 - (void)viewDidUnload
@@ -253,10 +261,16 @@
 }
 
 //push barcode scanner view
--(void) pushBarCodeScanner
+-(IBAction)pushBarCodeScanner:(id)sender
 {
     EHBarCodeViewController *vc = [[EHBarCodeViewController alloc] init];
     [self.navigationController pushViewController:vc animated:NO];
+}
+
+-(void) pushDetailView
+{
+    EHDetailViewController *vc = [[EHDetailViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

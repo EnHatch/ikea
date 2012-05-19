@@ -15,12 +15,12 @@
 @implementation EHDetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize detailsTV = _detailsTV;
+@synthesize productIV = _productIV;
 
 - (void)dealloc
 {
   [_detailItem release];
-  [_detailDescriptionLabel release];
     [super dealloc];
 }
 
@@ -42,8 +42,7 @@
     // Update the user interface for the detail item.
 
   if (self.detailItem) {
-      self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
-  }
+        }
 }
 
 - (void)viewDidLoad
@@ -51,13 +50,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
   [self configureView];
+    
+    self.navigationItem.title = @"Product Name";
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hammericon2.png"] style:UIBarButtonItemStylePlain target:self action:@selector(pushPodViewer:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-  self.detailDescriptionLabel = nil;
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -72,6 +77,40 @@
     self.title = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
+}
+
+#pragma Mark - TableView methods
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+-(IBAction)pushPodViewer:(id)sender
+{
+    
 }
 							
 @end
