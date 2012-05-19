@@ -49,12 +49,16 @@
 
 }
 
-- (void)stopAnimation {
+- (void)pauseAnimation {
     [_animationController pause];
 }
 
 - (void)startAnimation {
     [_animationController start];
+}
+
+- (void)rewindAnimation {
+    [_animationController stop];
 }
 
 #pragma mark - First Run

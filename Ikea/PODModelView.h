@@ -26,7 +26,8 @@
 
 - (void)toggleCaption;
 
-- (void)stopAnimation;
+- (void)pauseAnimation;
 - (void)startAnimation;
+- (void)rewindAnimation;
 
 @end
