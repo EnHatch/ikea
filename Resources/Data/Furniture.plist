@@ -10,7 +10,7 @@
 			<key>Image</key>
 			<string>vikaalexstorage.png</string>
 			<key>Name</key>
-			<string>Vika Alex Storage Unit</string>
+			<string>Vika Alex</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -29,14 +29,14 @@
 			<key>Image</key>
 			<string>vikaalexdrawer.png</string>
 			<key>Name</key>
-			<string>VIKA ALEX Drawer Unit</string>
+			<string>VIKA Amon</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
 					<key>Name</key>
 					<string>Ed Aulopsky</string>
 					<key>Review</key>
-					<string>I don't like how many drawers this thing has, it's ridiculous and they are sooooo small, silly #ikeafail</string>
+					<string>I don&apos;t like how many drawers this thing has, it&apos;s ridiculous and they are sooooo small, silly #ikeafail</string>
 					<key>Stars</key>
 					<integer>2</integer>
 				</dict>
@@ -48,7 +48,7 @@
 			<key>Image</key>
 			<string>vikaalexstorage.png</string>
 			<key>Name</key>
-			<string>VIKA ALEX storage c</string>
+			<string>VIKA Glasholm</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -65,9 +65,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>annefors.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>VIKA Annefors</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -84,9 +84,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>artur.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>VIKA Artur</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -103,9 +103,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>malkolm.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>Malkolm</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -122,9 +122,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>gregor.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>Gregor</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -141,9 +141,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>expedit.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>Expedit</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -160,9 +160,9 @@
 			<key>Detail</key>
 			<string>This piece is the perfect fit for any kitchen</string>
 			<key>Image</key>
-			<string>malm.png</string>
+			<string>laiva.png</string>
 			<key>Name</key>
-			<string>Malm</string>
+			<string>Laiva</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
