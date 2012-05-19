@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
+		42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
+		42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6F156813770089B3D3 /* CoreGraphics.framework */; };
+		42E4AB72156813770089B3D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB71156813770089B3D3 /* CoreData.framework */; };
+		42E4AB78156813770089B3D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42E4AB76156813770089B3D3 /* InfoPlist.strings */; };
+		42E4AB7A156813770089B3D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AB79156813770089B3D3 /* main.m */; };
+		42E4AB7E156813770089B3D3 /* EHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AB7D156813770089B3D3 /* EHAppDelegate.m */; };
+		42E4AB81156813770089B3D3 /* Ikea.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */; };
+		42E4AB84156813770089B3D3 /* EHMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AB83156813770089B3D3 /* EHMasterViewController.m */; };
+		42E4AB87156813770089B3D3 /* EHDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4AB86156813770089B3D3 /* EHDetailViewController.m */; };
+		42E4AB8A156813770089B3D3 /* EHMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E4AB88156813770089B3D3 /* EHMasterViewController.xib */; };
+		42E4AB8D156813770089B3D3 /* EHDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */; };
+		42E4AB95156813770089B3D3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB94156813770089B3D3 /* SenTestingKit.framework */; };
+		42E4AB96156813770089B3D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6B156813770089B3D3 /* UIKit.framework */; };
+		42E4AB97156813770089B3D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB6D156813770089B3D3 /* Foundation.framework */; };
+		42E4AB98156813770089B3D3 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E4AB71156813770089B3D3 /* CoreData.framework */; };
+		42E4ABA0156813780089B3D3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 42E4AB9E156813780089B3D3 /* InfoPlist.strings */; };
+		42E4ABA3156813780089B3D3 /* IkeaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E4ABA2156813780089B3D3 /* IkeaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42E4AB99156813770089B3D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42E4AB5E156813770089B3D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42E4AB66156813770089B3D3;
+			remoteInfo = Ikea;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42E4AB67156813770089B3D3 /* Ikea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ikea.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E4AB6B156813770089B3D3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		42E4AB6D156813770089B3D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42E4AB6F156813770089B3D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42E4AB71156813770089B3D3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42E4AB75156813770089B3D3 /* Ikea-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ikea-Info.plist"; sourceTree = "<group>"; };
+		42E4AB77156813770089B3D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42E4AB79156813770089B3D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42E4AB7B156813770089B3D3 /* Ikea-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ikea-Prefix.pch"; sourceTree = "<group>"; };
+		42E4AB7C156813770089B3D3 /* EHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHAppDelegate.h; sourceTree = "<group>"; };
+		42E4AB7D156813770089B3D3 /* EHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHAppDelegate.m; sourceTree = "<group>"; };
+		42E4AB80156813770089B3D3 /* Ikea.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ikea.xcdatamodel; sourceTree = "<group>"; };
+		42E4AB82156813770089B3D3 /* EHMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHMasterViewController.h; sourceTree = "<group>"; };
+		42E4AB83156813770089B3D3 /* EHMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHMasterViewController.m; sourceTree = "<group>"; };
+		42E4AB85156813770089B3D3 /* EHDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EHDetailViewController.h; sourceTree = "<group>"; };
+		42E4AB86156813770089B3D3 /* EHDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EHDetailViewController.m; sourceTree = "<group>"; };
+		42E4AB89156813770089B3D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EHMasterViewController.xib; sourceTree = "<group>"; };
+		42E4AB8C156813770089B3D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EHDetailViewController.xib; sourceTree = "<group>"; };
+		42E4AB93156813770089B3D3 /* IkeaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IkeaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E4AB94156813770089B3D3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		42E4AB9D156813780089B3D3 /* IkeaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IkeaTests-Info.plist"; sourceTree = "<group>"; };
+		42E4AB9F156813780089B3D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		42E4ABA1156813780089B3D3 /* IkeaTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IkeaTests.h; sourceTree = "<group>"; };
+		42E4ABA2156813780089B3D3 /* IkeaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IkeaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42E4AB64156813770089B3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4AB6C156813770089B3D3 /* UIKit.framework in Frameworks */,
+				42E4AB6E156813770089B3D3 /* Foundation.framework in Frameworks */,
+				42E4AB70156813770089B3D3 /* CoreGraphics.framework in Frameworks */,
+				42E4AB72156813770089B3D3 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E4AB8F156813770089B3D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4AB95156813770089B3D3 /* SenTestingKit.framework in Frameworks */,
+				42E4AB96156813770089B3D3 /* UIKit.framework in Frameworks */,
+				42E4AB97156813770089B3D3 /* Foundation.framework in Frameworks */,
+				42E4AB98156813770089B3D3 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42E4AB5C156813770089B3D3 = {
+			isa = PBXGroup;
+			children = (
+				42E4AB73156813770089B3D3 /* Ikea */,
+				42E4AB9B156813770089B3D3 /* IkeaTests */,
+				42E4AB6A156813770089B3D3 /* Frameworks */,
+				42E4AB68156813770089B3D3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42E4AB68156813770089B3D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB67156813770089B3D3 /* Ikea.app */,
+				42E4AB93156813770089B3D3 /* IkeaTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42E4AB6A156813770089B3D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB6B156813770089B3D3 /* UIKit.framework */,
+				42E4AB6D156813770089B3D3 /* Foundation.framework */,
+				42E4AB6F156813770089B3D3 /* CoreGraphics.framework */,
+				42E4AB71156813770089B3D3 /* CoreData.framework */,
+				42E4AB94156813770089B3D3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42E4AB73156813770089B3D3 /* Ikea */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB7C156813770089B3D3 /* EHAppDelegate.h */,
+				42E4AB7D156813770089B3D3 /* EHAppDelegate.m */,
+				42E4AB82156813770089B3D3 /* EHMasterViewController.h */,
+				42E4AB83156813770089B3D3 /* EHMasterViewController.m */,
+				42E4AB85156813770089B3D3 /* EHDetailViewController.h */,
+				42E4AB86156813770089B3D3 /* EHDetailViewController.m */,
+				42E4AB88156813770089B3D3 /* EHMasterViewController.xib */,
+				42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */,
+				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
+				42E4AB74156813770089B3D3 /* Supporting Files */,
+			);
+			path = Ikea;
+			sourceTree = "<group>";
+		};
+		42E4AB74156813770089B3D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB75156813770089B3D3 /* Ikea-Info.plist */,
+				42E4AB76156813770089B3D3 /* InfoPlist.strings */,
+				42E4AB79156813770089B3D3 /* main.m */,
+				42E4AB7B156813770089B3D3 /* Ikea-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42E4AB9B156813770089B3D3 /* IkeaTests */ = {
+			isa = PBXGroup;
+			children = (
+				42E4ABA1156813780089B3D3 /* IkeaTests.h */,
+				42E4ABA2156813780089B3D3 /* IkeaTests.m */,
+				42E4AB9C156813780089B3D3 /* Supporting Files */,
+			);
+			path = IkeaTests;
+			sourceTree = "<group>";
+		};
+		42E4AB9C156813780089B3D3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB9D156813780089B3D3 /* IkeaTests-Info.plist */,
+				42E4AB9E156813780089B3D3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42E4AB66156813770089B3D3 /* Ikea */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E4ABA6156813780089B3D3 /* Build configuration list for PBXNativeTarget "Ikea" */;
+			buildPhases = (
+				42E4AB63156813770089B3D3 /* Sources */,
+				42E4AB64156813770089B3D3 /* Frameworks */,
+				42E4AB65156813770089B3D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ikea;
+			productName = Ikea;
+			productReference = 42E4AB67156813770089B3D3 /* Ikea.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42E4AB92156813770089B3D3 /* IkeaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42E4ABA9156813780089B3D3 /* Build configuration list for PBXNativeTarget "IkeaTests" */;
+			buildPhases = (
+				42E4AB8E156813770089B3D3 /* Sources */,
+				42E4AB8F156813770089B3D3 /* Frameworks */,
+				42E4AB90156813770089B3D3 /* Resources */,
+				42E4AB91156813770089B3D3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42E4AB9A156813770089B3D3 /* PBXTargetDependency */,
+			);
+			name = IkeaTests;
+			productName = IkeaTests;
+			productReference = 42E4AB93156813770089B3D3 /* IkeaTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42E4AB5E156813770089B3D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EH;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Gargoyle Software";
+			};
+			buildConfigurationList = 42E4AB61156813770089B3D3 /* Build configuration list for PBXProject "Ikea" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 42E4AB5C156813770089B3D3;
+			productRefGroup = 42E4AB68156813770089B3D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42E4AB66156813770089B3D3 /* Ikea */,
+				42E4AB92156813770089B3D3 /* IkeaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42E4AB65156813770089B3D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4AB78156813770089B3D3 /* InfoPlist.strings in Resources */,
+				42E4AB8A156813770089B3D3 /* EHMasterViewController.xib in Resources */,
+				42E4AB8D156813770089B3D3 /* EHDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E4AB90156813770089B3D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4ABA0156813780089B3D3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42E4AB91156813770089B3D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42E4AB63156813770089B3D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4AB7A156813770089B3D3 /* main.m in Sources */,
+				42E4AB7E156813770089B3D3 /* EHAppDelegate.m in Sources */,
+				42E4AB81156813770089B3D3 /* Ikea.xcdatamodeld in Sources */,
+				42E4AB84156813770089B3D3 /* EHMasterViewController.m in Sources */,
+				42E4AB87156813770089B3D3 /* EHDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42E4AB8E156813770089B3D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42E4ABA3156813780089B3D3 /* IkeaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42E4AB9A156813770089B3D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42E4AB66156813770089B3D3 /* Ikea */;
+			targetProxy = 42E4AB99156813770089B3D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42E4AB76156813770089B3D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E4AB77156813770089B3D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		42E4AB88156813770089B3D3 /* EHMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E4AB89156813770089B3D3 /* en */,
+			);
+			name = EHMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E4AB8C156813770089B3D3 /* en */,
+			);
+			name = EHDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		42E4AB9E156813780089B3D3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42E4AB9F156813780089B3D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42E4ABA4156813780089B3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		42E4ABA5156813780089B3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42E4ABA7156813780089B3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
+				INFOPLIST_FILE = "Ikea/Ikea-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		42E4ABA8156813780089B3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
+				INFOPLIST_FILE = "Ikea/Ikea-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		42E4ABAA156813780089B3D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ikea.app/Ikea";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
+				INFOPLIST_FILE = "IkeaTests/IkeaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		42E4ABAB156813780089B3D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ikea.app/Ikea";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
+				INFOPLIST_FILE = "IkeaTests/IkeaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42E4AB61156813770089B3D3 /* Build configuration list for PBXProject "Ikea" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E4ABA4156813780089B3D3 /* Debug */,
+				42E4ABA5156813780089B3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42E4ABA6156813780089B3D3 /* Build configuration list for PBXNativeTarget "Ikea" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E4ABA7156813780089B3D3 /* Debug */,
+				42E4ABA8156813780089B3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42E4ABA9156813780089B3D3 /* Build configuration list for PBXNativeTarget "IkeaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42E4ABAA156813780089B3D3 /* Debug */,
+				42E4ABAB156813780089B3D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				42E4AB80156813770089B3D3 /* Ikea.xcdatamodel */,
+			);
+			currentVersion = 42E4AB80156813770089B3D3 /* Ikea.xcdatamodel */;
+			path = Ikea.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 42E4AB5E156813770089B3D3 /* Project object */;
+}
