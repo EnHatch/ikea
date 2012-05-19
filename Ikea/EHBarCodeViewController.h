@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EHBarCodeViewController : UIViewController
+#import "ZBarSDK.h"
+
+@interface EHBarCodeViewController : UIViewController <ZBarReaderDelegate>
 
 -(void) loadBarCodeScanner;
 

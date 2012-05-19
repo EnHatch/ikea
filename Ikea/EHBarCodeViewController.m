@@ -8,8 +8,6 @@
 
 #import "EHBarCodeViewController.h"
 
-#import "ZBarSDK.h"
-
 @interface EHBarCodeViewController ()
 
 @end
@@ -60,7 +58,7 @@
 - (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
     NSLog(@"Results: %@", results);
     

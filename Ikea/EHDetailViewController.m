@@ -8,6 +8,8 @@
 
 #import "EHDetailViewController.h"
 
+#import "FurnitureAssemblyViewController.h"
+
 @interface EHDetailViewController ()
 - (void)configureView;
 @end
@@ -17,10 +19,24 @@
 @synthesize detailItem = _detailItem;
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
+@synthesize assemblyButton = _assemblyButton;
+
+#pragma mark - Initialization
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    self.title = NSLocalizedString(@"Detail", @"Detail");
+  }
+  return self;
+}
+
+#pragma mark - Cleanup
 
 - (void)dealloc
 {
-  [_detailItem release];
+    [_detailItem release];
     [super dealloc];
 }
 
@@ -28,55 +44,59 @@
 
 - (void)setDetailItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
-        [_detailItem release];
-        _detailItem = [newDetailItem retain];
+  if (_detailItem != newDetailItem) {
+    [_detailItem release];
+    _detailItem = [newDetailItem retain];
 
-        // Update the view.
-        [self configureView];
-    }
+    // Update the view.
+    [self configureView];
+  }
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+  // Update the user interface for the detail item.
 
   if (self.detailItem) {
-        }
+  }
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view, typically from a nib.
   [self configureView];
-    
+
     self.navigationItem.title = @"Product Name";
-    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"hammericon2.png"] style:UIBarButtonItemStylePlain target:self action:@selector(pushPodViewer:)];
+
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
+
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
 }
+
+#pragma mark - UI Callbacks
+
+- (IBAction)assemblyButtonWasPressed:(id)sender {
+  FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
+  [self.navigationController pushViewController: fvc
+                                      animated: YES];
+  [fvc release];
+}
+
+#pragma mark - Rotate
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    self.title = NSLocalizedString(@"Detail", @"Detail");
-    }
-    return self;
 }
 
 #pragma Mark - TableView methods
@@ -93,7 +113,7 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    
+
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
@@ -105,12 +125,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
 }
 
--(IBAction)pushPodViewer:(id)sender
-{
-    
-}
-							
 @end

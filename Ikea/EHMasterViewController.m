@@ -183,8 +183,10 @@
     if (!self.detailViewController) {
         self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
     }
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = object;
+
+    //NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    //self.detailViewController.detailItem = object;
+
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }
 
@@ -287,11 +289,15 @@
 }
  */
 
+#pragma mark - TableView DataSource
+
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
 }
+
+#pragma mark - UI Callbacks
 
 //push barcode scanner view
 -(IBAction)pushBarCodeScanner:(id)sender
