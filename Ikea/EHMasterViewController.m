@@ -10,6 +10,7 @@
 
 #import "EHDetailViewController.h"
 #import "EHBarCodeViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface EHMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -20,6 +21,7 @@
 @synthesize detailViewController = _detailViewController;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize furnitureList = _furnitureList;
 
 #pragma mark - Initialization
 
@@ -28,6 +30,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
     self.title = NSLocalizedString(@"Master", @"Master");
+        NSDictionary *furniturePlist = [NSDictionary dictionaryWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Furniture"ofType:@"plist"]];        
+        self.furnitureList = [furniturePlist objectForKey: @"items"];
     }
     return self;
 }
@@ -128,7 +132,7 @@
 {
 //  id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
 //  return [sectionInfo numberOfObjects];
-    return 10;
+    return [self.furnitureList count];
 }
 
 // Customize the appearance of table view cells.
@@ -154,7 +158,10 @@
     if (!productIV) {productIV = (UIImageView*)[cell viewWithTag:1]; }
     if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
     
-    productLabel.text = @"Product Name";
+    NSDictionary *item = [self.furnitureList objectAtIndex:indexPath.row];
+    [productIV setImageWithURL:[NSURL URLWithString:[item objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
+    
+    productLabel.text = [item objectForKey:@"Name"];
     productIV.image = [UIImage imageNamed:@"barcodeicon.png"];
     
     return cell;
@@ -198,6 +205,8 @@
 
     //NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     //self.detailViewController.detailItem = object;
+    
+    self.detailViewController.product = [self.furnitureList objectAtIndex:indexPath.row];
 
     [self.navigationController pushViewController:self.detailViewController animated:YES];
 }

@@ -14,12 +14,15 @@
 
 @interface PODModelView ()
 
+@property (nonatomic, retain) Isgl3dAnimationController * animationController;
+
 @end
 
 @implementation PODModelView
 
 @synthesize modelNames = _modelNames;
 @synthesize cameraController = _cameraController;
+@synthesize animationController = _animationController;
 
 #pragma mark - Initialization 
 
@@ -46,9 +49,16 @@
 
 }
 
-- (void)toggleAnimation {
-    NSLog(@"toggleAnimation");
+- (void)pauseAnimation {
+    [_animationController pause];
+}
 
+- (void)startAnimation {
+    [_animationController start];
+}
+
+- (void)rewindAnimation {
+    [_animationController stop];
 }
 
 #pragma mark - First Run
@@ -114,24 +124,39 @@
 }
 
 - (void)loadModelWithName:(NSString *)modelName {
-  NSLog(@"loading model with filename: %@", modelName);
-  [self unschedule];
-  [self clearScene];
+    NSLog(@"loading model with filename: %@", modelName);
+    [self unschedule];
+    [self clearScene];
 
-  //Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:modelName];
-  Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithResource:modelName];
+    //Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithFile:modelName];
+    Isgl3dPODImporter * podImporter = [Isgl3dPODImporter podImporterWithResource:modelName];
 
-  Isgl3dSkeletonNode *skel = [self.scene createSkeletonNode];
-  [podImporter addMeshesToScene: skel];
-  [podImporter printPODInfo];
+    Isgl3dSkeletonNode *skel = [self.scene createSkeletonNode];
+    [podImporter addMeshesToScene: skel];
+    [podImporter printPODInfo];
 
-   NSLog(@"number of frames = %d", [podImporter numberOfFrames]);
+    NSLog(@"number of frames = %d", [podImporter numberOfFrames]);
+    if([podImporter numberOfFrames] > 0) {
 
-  //[self setupLight];
-  //[self zeroCamera];
+        if (_animationController) {
+            self.animationController = nil;
+        }
+        _animationController = [[Isgl3dAnimationController alloc]
+            initWithSkeleton:skel
+            andNumberOfFrames:[podImporter numberOfFrames]];
+        _animationController.repeat = NO;
+    } else {
+        // No animation
+        if (_animationController) {
+            self.animationController = nil;
+        }
+    }
 
-  // Schedule updates
-  [self schedule:@selector(tick:)];
+    //[self setupLight];
+    //[self zeroCamera];
+
+    // Schedule updates
+    [self schedule:@selector(tick:)];
 }
 
 - (void)loadModelWithIndex:(NSUInteger)index {
@@ -158,6 +183,8 @@
 
 - (void) dealloc {
   [self clearScene];
+  
+  self.animationController = nil;
 
   [super dealloc];
 }

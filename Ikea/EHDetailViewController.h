@@ -10,12 +10,12 @@
 
 @interface EHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 
-@property (strong, nonatomic) id detailItem;
-
 @property (strong, nonatomic) IBOutlet UITextView *detailsTV;
 @property (strong, nonatomic) IBOutlet UIImageView *productIV;
 
 @property (strong, nonatomic) IBOutlet UIButton *assemblyButton;
+
+@property (strong, nonatomic) NSDictionary *product;
 
 - (IBAction)assemblyButtonWasPressed:(id)sender;
 
