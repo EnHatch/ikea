@@ -194,12 +194,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.detailViewController) {
-        self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
-    }
+    //if (!self.detailViewController) {
+    //    self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
+    //}
+    self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
 
-    //NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    //self.detailViewController.detailItem = object;
     
     self.detailViewController.product = [self.furnitureList objectAtIndex:indexPath.row];
 

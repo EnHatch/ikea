@@ -7,10 +7,13 @@
 //
 
 #import "EHDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 #import "FurnitureAssemblyViewController.h"
 
-#import "UIImageView+AFNetworking.h"
+#define KEY_REVIEWS @"Reviews"
+#define KEY_REVIEW @"Review"
+#define KEY_STARS @"Stars"
 
 @interface EHDetailViewController ()
 @end
@@ -55,29 +58,28 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear: animated];
 
     self.navigationItem.title = [self.product objectForKey:@"Name"];
-    
+
     NSLog(@"loaded detail with product: %@", self.product);
     NSString *detail = [self.product objectForKey:@"Detail"];
-    
+
     NSArray *details = [detail componentsSeparatedByString:@"~"];
-    
+
     NSString *description = @"";
     for (NSString *string in details)
     {
         string = [string stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
         description = [NSString stringWithFormat:@"%@%@\n", description, string];
     }
-    
-    self.detailsTV.text = description;
-    
-    [self.productIV setImageWithURL:[NSURL URLWithString:[self.product objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
 
+    self.detailsTV.text = description;
+
+    [self.productIV setImageWithURL:[NSURL URLWithString:[self.product objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
 }
 
 
@@ -103,6 +105,14 @@
   return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma Mark - Data Helpers
+
+- (NSArray *)reviews
+{
+    NSArray *reviews = [self.product objectForKey: KEY_REVIEWS];
+    return reviews;
+}
+
 #pragma Mark - TableView methods
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -111,7 +121,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    NSArray *reviews = [self reviews];
+    return reviews.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -120,9 +131,15 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
        // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
+
+    NSDictionary *review = [[self reviews] objectAtIndex: indexPath.row];
+
+    cell.textLabel.text = [review objectForKey: KEY_REVIEW];
+    cell.detailTextLabel.text = [[review objectForKey: KEY_STARS] stringValue];
 
     return cell;
 }
