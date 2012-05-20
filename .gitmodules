@@ -4,3 +4,6 @@
 [submodule "Libraries/AFNetworking"]
 	path = Libraries/AFNetworking
 	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Libraries/DLStarRating"]
+	path = Libraries/DLStarRating
+	url = https://github.com/dlinsin/DLStarRating.git
