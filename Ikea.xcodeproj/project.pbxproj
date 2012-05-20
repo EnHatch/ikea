@@ -20,6 +20,7 @@
 		2A25615515681985008A5292 /* EHBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A25615315681985008A5292 /* EHBarCodeViewController.m */; };
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
+		2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D031C15686ECB0068AC82 /* EHAnimationController.m */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -403,6 +404,8 @@
 		2A25615415681985008A5292 /* EHBarCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHBarCodeViewController.xib; sourceTree = "<group>"; };
 		2A25615B156820E6008A5292 /* Furniture.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Furniture.plist; path = Resources/Data/Furniture.plist; sourceTree = SOURCE_ROOT; };
 		2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCustomTableCell.xib; sourceTree = "<group>"; };
+		2A7D031B15686ECB0068AC82 /* EHAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAnimationController.h; sourceTree = "<group>"; };
+		2A7D031C15686ECB0068AC82 /* EHAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAnimationController.m; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -3101,6 +3104,8 @@
 				4292C638156844760069B518 /* FurnitureAssemblyViewController.h */,
 				4292C639156844760069B518 /* FurnitureAssemblyViewController.mm */,
 				4292C63A156844760069B518 /* FurnitureAssemblyViewController.xib */,
+				2A7D031B15686ECB0068AC82 /* EHAnimationController.h */,
+				2A7D031C15686ECB0068AC82 /* EHAnimationController.m */,
 			);
 			name = 3d;
 			sourceTree = "<group>";
@@ -3703,6 +3708,7 @@
 				427CA694156879F90079D123 /* DLStarView.m in Sources */,
 				427CA69B156879F90079D123 /* UIView+Subviews.m in Sources */,
 				427CA6BE15687A800079D123 /* RatingTableCell.m in Sources */,
+				2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

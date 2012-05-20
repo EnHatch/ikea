@@ -11,10 +11,12 @@
 #import "PODModelView.h"
 
 #import "Isgl3dIkeaCameraController.h"
+#import "EHAnimationController.h"
 
 @interface PODModelView ()
 
-@property (nonatomic, retain) Isgl3dAnimationController * animationController;
+//@property (nonatomic, retain) Isgl3dAnimationController * animationController;
+@property (nonatomic, retain) EHAnimationController *animationController;
 
 @end
 
