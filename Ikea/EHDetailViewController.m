@@ -21,7 +21,9 @@
 
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
+//@synthesize productButton = _productButton;
 @synthesize assemblyButton = _assemblyButton;
+
 @synthesize product = _product;
 
 #pragma mark - Initialization
@@ -54,9 +56,9 @@
 
     self.navigationItem.title = @"Product Name";
 
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    [rightButton release];
+    //UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
+    //self.navigationItem.rightBarButtonItem = rightButton;
+    //[rightButton release];
 
     self.navigationItem.title = [self.product objectForKey:@"Name"];
 
@@ -127,7 +129,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
+    //NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
 
     //NSString *text = [review objectForKey: KEY_REVIEW];
     //CGFloat height = [text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(240,300) lineBreakMode:UILineBreakModeWordWrap].height;

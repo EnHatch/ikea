@@ -21,10 +21,7 @@
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
 		2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D031C15686ECB0068AC82 /* EHAnimationController.m */; };
-		2A8E9B4815688D9500D032F3 /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4715688D9500D032F3 /* dollar sign.png */; };
-		2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4915688D9C00D032F3 /* clock.png */; };
 		2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4B15688EF000D032F3 /* GravuCon */; };
-		2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4D156890F300D032F3 /* ikeaLogo.png */; };
 		2A8E9C3A1568A47A00D032F3 /* playbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9C391568A47A00D032F3 /* playbtn.png */; };
 		2AAC14701568FDC500F766A3 /* start_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC146F1568FDC500F766A3 /* start_good.pod */; };
 		2AAC147C1568FF7E00F766A3 /* step1_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14711568FF7E00F766A3 /* step1_good.pod */; };
@@ -38,6 +35,9 @@
 		2AAC14841568FF7E00F766A3 /* step9_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14791568FF7E00F766A3 /* step9_good.pod */; };
 		2AAC14851568FF7E00F766A3 /* step10_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147A1568FF7E00F766A3 /* step10_good.pod */; };
 		2AAC14861568FF7E00F766A3 /* step11_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147B1568FF7E00F766A3 /* step11_good.pod */; };
+		421869481568F46F0028A37E /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869451568F46F0028A37E /* clock.png */; };
+		421869491568F46F0028A37E /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869461568F46F0028A37E /* dollar sign.png */; };
+		42186A38156902090028A37E /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186A37156902090028A37E /* ikeaLogo.png */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -438,6 +438,9 @@
 		2AAC14791568FF7E00F766A3 /* step9_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step9_good.pod; sourceTree = "<group>"; };
 		2AAC147A1568FF7E00F766A3 /* step10_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step10_good.pod; sourceTree = "<group>"; };
 		2AAC147B1568FF7E00F766A3 /* step11_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step11_good.pod; sourceTree = "<group>"; };
+		421869451568F46F0028A37E /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		421869461568F46F0028A37E /* dollar sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar sign.png"; sourceTree = "<group>"; };
+		42186A37156902090028A37E /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -3148,6 +3151,9 @@
 		4292C643156844A30069B518 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				42186A37156902090028A37E /* ikeaLogo.png */,
+				421869451568F46F0028A37E /* clock.png */,
+				421869461568F46F0028A37E /* dollar sign.png */,
 				42BD55E81568584B00886F9D /* barcodebtn.png */,
 				42BD55E91568584B00886F9D /* barcodeicon.png */,
 				42BD55EA1568584B00886F9D /* ikeanavbar.png */,
@@ -3693,10 +3699,7 @@
 				427CA699156879F90079D123 /* star_highlighted.png in Resources */,
 				427CA69A156879F90079D123 /* star_highlighted@2x.png in Resources */,
 				427CA6BB15687A620079D123 /* RatingTableCell.xib in Resources */,
-				2A8E9B4815688D9500D032F3 /* dollar sign.png in Resources */,
-				2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */,
 				2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */,
-				2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */,
 				2A8E9C3A1568A47A00D032F3 /* playbtn.png in Resources */,
 				2AAC14701568FDC500F766A3 /* start_good.pod in Resources */,
 				2AAC147C1568FF7E00F766A3 /* step1_good.pod in Resources */,
@@ -3710,6 +3713,9 @@
 				2AAC14841568FF7E00F766A3 /* step9_good.pod in Resources */,
 				2AAC14851568FF7E00F766A3 /* step10_good.pod in Resources */,
 				2AAC14861568FF7E00F766A3 /* step11_good.pod in Resources */,
+				421869481568F46F0028A37E /* clock.png in Resources */,
+				421869491568F46F0028A37E /* dollar sign.png in Resources */,
+				42186A38156902090028A37E /* ikeaLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
