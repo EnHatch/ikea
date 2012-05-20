@@ -67,7 +67,6 @@
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:scanButton];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
-    [scanButton release];
 
     NSLog(@"loaded detail with product: %@", self.product);
     NSString *detail = [self.product objectForKey:@"Detail"];
