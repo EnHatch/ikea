@@ -5,34 +5,36 @@
 	<key>items</key>
 	<array>
 		<dict>
-			<key>Barcode</key>
-			<string>EAN-13:0082666754404</string>
 			<key>Detail</key>
-			<string>Width: 14 1/8 &quot;~
+			<string>Width: 13 3/4 &quot;~
 Depth: 22 7/8 &quot;~
 Height: 27 1/2 &quot;~
+Max. load: 110 lb~
 
 
-Width: 36 cm~
+Width: 35 cm~
 Depth: 58 cm~
-Height: 70 cm</string>
+Height: 70 cm~
+Max. load: 50 kg</string>
 			<key>Image</key>
-			<string>http://www.ikea.com/us/en/images/products/vika-alex-drawer-unit__0087723_PE217289_S4.JPG</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-annefors-table-leg-with-storage__0094035_PE231708_S4.JPG</string>
 			<key>Name</key>
-			<string>Vika Alex</string>
-			<key>Time</key>
-			<string>60 min</string>
+			<string>VIKA Annefors</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666776604</string>
 			<key>Price</key>
-			<string>79.99</string>
+			<string>40.00</string>
+			<key>Time</key>
+			<string>35 min</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
 					<key>Name</key>
-					<string>David Yak</string>
+					<string>Joe Blo</string>
 					<key>Review</key>
-					<string>Pretty simple piece of furniture, but a little complicated to assemble.  It helped that I have the 3D Ikea App</string>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
 					<key>Stars</key>
-					<integer>4</integer>
+					<integer>3</integer>
 				</dict>
 			</array>
 		</dict>
@@ -106,40 +108,6 @@ Max. load: 50 kg</string>
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>Width: 13 3/4 &quot;~
-Depth: 22 7/8 &quot;~
-Height: 27 1/2 &quot;~
-Max. load: 110 lb~
-
-
-Width: 35 cm~
-Depth: 58 cm~
-Height: 70 cm~
-Max. load: 50 kg</string>
-			<key>Image</key>
-			<string>http://www.ikea.com/us/en/images/products/vika-annefors-table-leg-with-storage__0094035_PE231708_S4.JPG</string>
-			<key>Name</key>
-			<string>VIKA Annefors</string>
-			<key>Barcode</key>
-			<string>EAN-13:0082666776604</string>
-			<key>Price</key>
-			<string>40.00</string>
-			<key>Time</key>
-			<string>35 min</string>
-			<key>Reviews</key>
-			<array>
-				<dict>
-					<key>Name</key>
-					<string>Joe Blo</string>
-					<key>Review</key>
-					<string>This was great until I broke it during a particularly ACTIVE session...</string>
-					<key>Stars</key>
-					<integer>3</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>Detail</key>
 			<string>Width: 18 1/8 &quot;~
 Depth: 27 1/2 &quot;~
 Min. height: 28 &quot;~
@@ -173,6 +141,38 @@ Max load/shelf: 25 kg</string>
 					<string>This was great until I broke it during a particularly ACTIVE session...</string>
 					<key>Stars</key>
 					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Barcode</key>
+			<string>EAN-13:0082666754404</string>
+			<key>Detail</key>
+			<string>Width: 14 1/8 &quot;~
+Depth: 22 7/8 &quot;~
+Height: 27 1/2 &quot;~
+
+
+Width: 36 cm~
+Depth: 58 cm~
+Height: 70 cm</string>
+			<key>Image</key>
+			<string>http://www.ikea.com/us/en/images/products/vika-alex-drawer-unit__0087723_PE217289_S4.JPG</string>
+			<key>Name</key>
+			<string>Vika Alex</string>
+			<key>Time</key>
+			<string>60 min</string>
+			<key>Price</key>
+			<string>79.99</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>David Yak</string>
+					<key>Review</key>
+					<string>Pretty simple piece of furniture, but a little complicated to assemble.  It helped that I have the 3D Ikea App</string>
+					<key>Stars</key>
+					<integer>4</integer>
 				</dict>
 			</array>
 		</dict>
