@@ -90,20 +90,38 @@
   // Release any retained subviews of the main view.
 }
 
+
 #pragma mark - UI Callbacks
 
-- (IBAction)assemblyButtonWasPressed:(id)sender {
-  FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
-  [self.navigationController pushViewController: fvc
-                                      animated: YES];
-  [fvc release];
+- (IBAction)loadModalBarCodeScanner
+{
+    ZBarReaderViewController *vc = [ZBarReaderViewController new];
+    vc.readerDelegate = self;
+    
+    [vc.scanner setSymbology:ZBAR_QRCODE config:ZBAR_CFG_ENABLE to:0];
+    vc.readerView.zoom = 1.0;
+    
+    [self presentModalViewController:vc animated:YES];
 }
 
-#pragma mark - Rotate
+- (IBAction)assemblyButtonWasPressed:(id)sender {
+    FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
+    [self.navigationController pushViewController: fvc
+                                      animated: YES];
+    [fvc release];
+}
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+#pragma mark - Alerts
+
+- (void)showInvalidBarcodeAlert
 {
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Unknown Barcode"
+                                                  message: @"We don't know this barcode!"
+                                                 delegate: nil
+                                        cancelButtonTitle: @"OK"
+                                        otherButtonTitles: nil];
+    [alert show];
+    [alert release];
 }
 
 #pragma Mark - Data Helpers
@@ -112,6 +130,59 @@
 {
     NSArray *reviews = [self.product objectForKey: KEY_REVIEWS];
     return reviews;
+}
+
+#pragma mark - Barcode Reading
+
+- (void)barcodeWasScanned:(NSString *)barcode
+                 withType:(NSString *)barcodeType
+{
+    NSString *concatenatedBarcode = [NSString stringWithFormat: @"%@:%@", 
+             barcodeType,
+             barcode
+             ];
+
+    for (NSDictionary *furniture in self.furnitureList) {
+        if ([[furniture objectForKey: KEY_BARCODE] isEqualToString: concatenatedBarcode]) {
+            [self navToProductDetail: furniture];
+            return;
+        }
+    }
+    [self showInvalidBarcodeAlert];
+    NSLog(@"Error. barcode not captured.");
+}
+
+#pragma mark - ZBarReaderDelegate
+
+- (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    NSLog(@"Results: %@", results);
+
+    NSString *barcode = nil;
+    NSString *barcodeType = nil;
+
+    for(ZBarSymbol *symbol in results) {
+        // process result
+        NSLog(@"symbol type: %@", symbol.typeName);
+        NSLog(@"symbol data: %@", symbol.data);
+
+        barcode = symbol.data;
+        barcodeType = symbol.typeName;
+    }
+    
+    [reader dismissModalViewControllerAnimated:YES];
+    
+    //[self pushDetailView];
+
+    if (barcode && barcodeType) {
+        [self barcodeWasScanned: barcode
+                       withType: barcodeType];
+    } else {
+        NSLog(@"Error. barcode not captured.");
+    }
 }
 
 #pragma Mark - UITableViewDataSource Methods
@@ -177,6 +248,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+}
+
+#pragma mark - Rotate
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
-@interface EHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
+@interface EHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDataSource, ZBarReaderDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextView *detailsTV;
 @property (strong, nonatomic) IBOutlet UIImageView *productIV;

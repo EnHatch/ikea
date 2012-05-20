@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EAN-13:0082666776604</key>
+	<dict>
+		<key>Name</key>
+		<string>VIKA ANNEFORS - Main</string>
+		<key>Barcode</key>
+		<string>EAN-13:0082666776604</string>
+	</dict>
+	<key>EAN-13:0082666709909</key>
+	<dict>
+		<key>Name</key>
+		<string>Mysterious IKEA Components</string>
+		<key>Barcode</key>
+		<string>EAN-13:0082666709909</string>
+	</dict>
+	<key>EAN-13:0082666754404</key>
+	<dict>
+		<key>Name</key>
+		<string>Generic Wooden Table Top</string>
+		<key>Barcode</key>
+		<string>EAN-13:0082666754404</string>
+	</dict>
+</dict>
+</plist>

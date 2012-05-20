@@ -25,6 +25,7 @@
 		421869481568F46F0028A37E /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869451568F46F0028A37E /* clock.png */; };
 		421869491568F46F0028A37E /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869461568F46F0028A37E /* dollar sign.png */; };
 		4218694A1568F46F0028A37E /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869471568F46F0028A37E /* ikeaLogo.png */; };
+		4218694C1568FEF70028A37E /* Picklist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4218694B1568FEF70028A37E /* Picklist.plist */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -417,6 +418,7 @@
 		421869451568F46F0028A37E /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		421869461568F46F0028A37E /* dollar sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar sign.png"; sourceTree = "<group>"; };
 		421869471568F46F0028A37E /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
+		4218694B1568FEF70028A37E /* Picklist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Picklist.plist; path = Resources/Data/Picklist.plist; sourceTree = SOURCE_ROOT; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1473,6 +1475,7 @@
 			isa = PBXGroup;
 			children = (
 				2A25615B156820E6008A5292 /* Furniture.plist */,
+				4218694B1568FEF70028A37E /* Picklist.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -3672,6 +3675,7 @@
 				421869481568F46F0028A37E /* clock.png in Resources */,
 				421869491568F46F0028A37E /* dollar sign.png in Resources */,
 				4218694A1568F46F0028A37E /* ikeaLogo.png in Resources */,
+				4218694C1568FEF70028A37E /* Picklist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
