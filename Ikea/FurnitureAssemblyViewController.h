@@ -24,6 +24,8 @@
 @property (nonatomic, retain) IBOutlet UIView *captionView;
 @property (nonatomic, retain) IBOutlet UITextView *captionTV;
 
+@property (nonatomic, retain) NSString *navTitle;
+
 @property (getter=isAnimating)BOOL animating;
 
 //@property (nonatomic, retain) Isgl3dBasic3DView *podModelView;

@@ -31,6 +31,7 @@
 @synthesize infoButton = _infoButton;
 @synthesize captionTV = _captionTV;
 @synthesize captionView = _captionView;
+@synthesize navTitle = _navTitle;
 
 #pragma mark - Initialization
 
@@ -54,11 +55,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
     [self initGestures];
     
     [self init3d];
 
-    self.navigationItem.title = @"3D";
+    self.navigationItem.title = self.navTitle;
 }
 
 - (void)viewDidUnload
@@ -68,6 +70,12 @@
 
     [[Isgl3dDirector sharedInstance] end];
     [[self.view viewWithTag: GL_VIEW_TAG] removeFromSuperview];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+   //  [[UIApplication sharedApplication] setStatusBarHidden:NO animated:NO];
 }
 
 #pragma mark - UI Callbacks
@@ -129,9 +137,24 @@
 #else
 
   NSArray *modelNames = [NSArray arrayWithObjects:
-  @"step1_n.pod",
-  @"step2_n.pod",
-  //@"man.pod",
+    //@"step1_n.pod",
+    //@"step3_n.pod",
+   //@"step2_n.pod",
+    @"start_good.pod",
+    @"step1_good.pod",
+    @"step2_good.pod",
+    @"step3_good.pod",
+    @"step4_good.pod",
+    @"step5_good.pod",
+    @"step6_good.pod",
+    @"step7_good.pod",
+    @"step8_good.pod",
+    @"step9_good.pod",
+    @"step10_good.pod",
+    @"step11_good.pod",
+    //@"testikea.pod",
+    //@"ikeatest2.pod",
+    //@"man.pod",
   nil];
 
   PODModelView *view = [[PODModelView alloc] initWithModelNames:modelNames];

@@ -25,6 +25,19 @@
 		2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4915688D9C00D032F3 /* clock.png */; };
 		2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4B15688EF000D032F3 /* GravuCon */; };
 		2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4D156890F300D032F3 /* ikeaLogo.png */; };
+		2A8E9C3A1568A47A00D032F3 /* playbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9C391568A47A00D032F3 /* playbtn.png */; };
+		2AAC14701568FDC500F766A3 /* start_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC146F1568FDC500F766A3 /* start_good.pod */; };
+		2AAC147C1568FF7E00F766A3 /* step1_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14711568FF7E00F766A3 /* step1_good.pod */; };
+		2AAC147D1568FF7E00F766A3 /* step2_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14721568FF7E00F766A3 /* step2_good.pod */; };
+		2AAC147E1568FF7E00F766A3 /* step3_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14731568FF7E00F766A3 /* step3_good.pod */; };
+		2AAC147F1568FF7E00F766A3 /* step4_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14741568FF7E00F766A3 /* step4_good.pod */; };
+		2AAC14801568FF7E00F766A3 /* step5_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14751568FF7E00F766A3 /* step5_good.pod */; };
+		2AAC14811568FF7E00F766A3 /* step6_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14761568FF7E00F766A3 /* step6_good.pod */; };
+		2AAC14821568FF7E00F766A3 /* step7_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14771568FF7E00F766A3 /* step7_good.pod */; };
+		2AAC14831568FF7E00F766A3 /* step8_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14781568FF7E00F766A3 /* step8_good.pod */; };
+		2AAC14841568FF7E00F766A3 /* step9_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14791568FF7E00F766A3 /* step9_good.pod */; };
+		2AAC14851568FF7E00F766A3 /* step10_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147A1568FF7E00F766A3 /* step10_good.pod */; };
+		2AAC14861568FF7E00F766A3 /* step11_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147B1568FF7E00F766A3 /* step11_good.pod */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -45,8 +58,6 @@
 		4292C6421568448C0069B518 /* CubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C6411568448C0069B518 /* CubeView.m */; };
 		4292C647156844C10069B518 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4292C646156844C10069B518 /* OpenGLES.framework */; };
 		4292C64A156844D00069B518 /* Isgl3dIkeaCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4292C649156844D00069B518 /* Isgl3dIkeaCameraController.m */; };
-		42BD5586156847BC00886F9D /* step1_n.pod in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5582156847BC00886F9D /* step1_n.pod */; };
-		42BD5587156847BC00886F9D /* step2_n.pod in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5583156847BC00886F9D /* step2_n.pod */; };
 		42BD5588156847BC00886F9D /* bone_texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42BD5585156847BC00886F9D /* bone_texture.jpg */; };
 		42BD55EB1568584B00886F9D /* barcodebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD55E81568584B00886F9D /* barcodebtn.png */; };
 		42BD55EC1568584B00886F9D /* barcodeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42BD55E91568584B00886F9D /* barcodeicon.png */; };
@@ -414,6 +425,19 @@
 		2A8E9B4915688D9C00D032F3 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		2A8E9B4B15688EF000D032F3 /* GravuCon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GravuCon; sourceTree = "<group>"; };
 		2A8E9B4D156890F300D032F3 /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
+		2A8E9C391568A47A00D032F3 /* playbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbtn.png; sourceTree = "<group>"; };
+		2AAC146F1568FDC500F766A3 /* start_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = start_good.pod; sourceTree = "<group>"; };
+		2AAC14711568FF7E00F766A3 /* step1_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step1_good.pod; sourceTree = "<group>"; };
+		2AAC14721568FF7E00F766A3 /* step2_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step2_good.pod; sourceTree = "<group>"; };
+		2AAC14731568FF7E00F766A3 /* step3_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step3_good.pod; sourceTree = "<group>"; };
+		2AAC14741568FF7E00F766A3 /* step4_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step4_good.pod; sourceTree = "<group>"; };
+		2AAC14751568FF7E00F766A3 /* step5_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step5_good.pod; sourceTree = "<group>"; };
+		2AAC14761568FF7E00F766A3 /* step6_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step6_good.pod; sourceTree = "<group>"; };
+		2AAC14771568FF7E00F766A3 /* step7_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step7_good.pod; sourceTree = "<group>"; };
+		2AAC14781568FF7E00F766A3 /* step8_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step8_good.pod; sourceTree = "<group>"; };
+		2AAC14791568FF7E00F766A3 /* step9_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step9_good.pod; sourceTree = "<group>"; };
+		2AAC147A1568FF7E00F766A3 /* step10_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step10_good.pod; sourceTree = "<group>"; };
+		2AAC147B1568FF7E00F766A3 /* step11_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step11_good.pod; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1291,8 +1315,6 @@
 		4292C646156844C10069B518 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		4292C648156844D00069B518 /* Isgl3dIkeaCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isgl3dIkeaCameraController.h; sourceTree = "<group>"; };
 		4292C649156844D00069B518 /* Isgl3dIkeaCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Isgl3dIkeaCameraController.m; sourceTree = "<group>"; };
-		42BD5582156847BC00886F9D /* step1_n.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step1_n.pod; sourceTree = "<group>"; };
-		42BD5583156847BC00886F9D /* step2_n.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step2_n.pod; sourceTree = "<group>"; };
 		42BD5585156847BC00886F9D /* bone_texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bone_texture.jpg; sourceTree = "<group>"; };
 		42BD55E81568584B00886F9D /* barcodebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcodebtn.png; sourceTree = "<group>"; };
 		42BD55E91568584B00886F9D /* barcodeicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcodeicon.png; sourceTree = "<group>"; };
@@ -1477,6 +1499,7 @@
 		2A2561A7156829AC008A5292 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2A8E9C391568A47A00D032F3 /* playbtn.png */,
 				2A8E9B4D156890F300D032F3 /* ikeaLogo.png */,
 				2A8E9B4915688D9C00D032F3 /* clock.png */,
 				2A8E9B4715688D9500D032F3 /* dollar sign.png */,
@@ -3138,8 +3161,18 @@
 		42BD5581156847BC00886F9D /* PODs */ = {
 			isa = PBXGroup;
 			children = (
-				42BD5582156847BC00886F9D /* step1_n.pod */,
-				42BD5583156847BC00886F9D /* step2_n.pod */,
+				2AAC146F1568FDC500F766A3 /* start_good.pod */,
+				2AAC14711568FF7E00F766A3 /* step1_good.pod */,
+				2AAC14721568FF7E00F766A3 /* step2_good.pod */,
+				2AAC14731568FF7E00F766A3 /* step3_good.pod */,
+				2AAC14741568FF7E00F766A3 /* step4_good.pod */,
+				2AAC14751568FF7E00F766A3 /* step5_good.pod */,
+				2AAC14761568FF7E00F766A3 /* step6_good.pod */,
+				2AAC14771568FF7E00F766A3 /* step7_good.pod */,
+				2AAC14781568FF7E00F766A3 /* step8_good.pod */,
+				2AAC14791568FF7E00F766A3 /* step9_good.pod */,
+				2AAC147A1568FF7E00F766A3 /* step10_good.pod */,
+				2AAC147B1568FF7E00F766A3 /* step11_good.pod */,
 			);
 			name = PODs;
 			path = Resources/PODs;
@@ -3649,8 +3682,6 @@
 				4292C63C156844760069B518 /* FurnitureAssemblyViewController.xib in Resources */,
 				425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */,
 				425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */,
-				42BD5586156847BC00886F9D /* step1_n.pod in Resources */,
-				42BD5587156847BC00886F9D /* step2_n.pod in Resources */,
 				42BD5588156847BC00886F9D /* bone_texture.jpg in Resources */,
 				42BD55EB1568584B00886F9D /* barcodebtn.png in Resources */,
 				42BD55EC1568584B00886F9D /* barcodeicon.png in Resources */,
@@ -3666,6 +3697,19 @@
 				2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */,
 				2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */,
 				2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */,
+				2A8E9C3A1568A47A00D032F3 /* playbtn.png in Resources */,
+				2AAC14701568FDC500F766A3 /* start_good.pod in Resources */,
+				2AAC147C1568FF7E00F766A3 /* step1_good.pod in Resources */,
+				2AAC147D1568FF7E00F766A3 /* step2_good.pod in Resources */,
+				2AAC147E1568FF7E00F766A3 /* step3_good.pod in Resources */,
+				2AAC147F1568FF7E00F766A3 /* step4_good.pod in Resources */,
+				2AAC14801568FF7E00F766A3 /* step5_good.pod in Resources */,
+				2AAC14811568FF7E00F766A3 /* step6_good.pod in Resources */,
+				2AAC14821568FF7E00F766A3 /* step7_good.pod in Resources */,
+				2AAC14831568FF7E00F766A3 /* step8_good.pod in Resources */,
+				2AAC14841568FF7E00F766A3 /* step9_good.pod in Resources */,
+				2AAC14851568FF7E00F766A3 /* step10_good.pod in Resources */,
+				2AAC14861568FF7E00F766A3 /* step11_good.pod in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

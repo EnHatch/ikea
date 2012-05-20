@@ -92,6 +92,7 @@
 
 - (IBAction)assemblyButtonWasPressed:(id)sender {
   FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
+    fvc.navTitle = self.navigationItem.title;
   [self.navigationController pushViewController: fvc
                                       animated: YES];
   [fvc release];
