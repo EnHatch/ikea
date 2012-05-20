@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"Pick List";
+
 }
 
 - (void)viewDidUnload
@@ -53,14 +55,7 @@
 #pragma mark - Cart Management
 
 - (BOOL)isItemInCart:(NSDictionary *)furniture {
-    BOOL itemInCart = [self.shoppingCart containsObject: furniture];
-
-    if (itemInCart) {
-
-	return YES;
-    } else {
-	return NO;
-    }
+    return [self.shoppingCart containsObject: furniture];
 }
 
 - (void)addItemToCart:(NSDictionary *)furniture {
