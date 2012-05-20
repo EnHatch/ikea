@@ -116,7 +116,7 @@
 
 - (void)init3d {
     // Instantiate the Isgl3dDirector and set background color
-    [Isgl3dDirector sharedInstance].backgroundColorString = @"333333ff";
+    [Isgl3dDirector sharedInstance].backgroundColorString = @"ffffff";
 
     // Set the director to display the FPS
     //[Isgl3dDirector sharedInstance].displayFPS = YES;

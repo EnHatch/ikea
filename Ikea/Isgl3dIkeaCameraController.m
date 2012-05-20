@@ -148,6 +148,8 @@
 	_camera.position = Isgl3dVector3Make(x, y, z);
 	//_camera.eyePosition = Isgl3dVector3Make(x, y, z);
         //[_camera setEyePosition: Isgl3dVector3Make(x, y, z)];
+    
+    
 	
 	// Add damping to camera velocities
 	_vTheta *= 0.99;

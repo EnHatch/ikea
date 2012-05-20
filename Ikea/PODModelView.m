@@ -143,7 +143,7 @@
         if (_animationController) {
             self.animationController = nil;
         }
-        _animationController = [[Isgl3dAnimationController alloc]
+        _animationController = [[EHAnimationController alloc]
             initWithSkeleton:skel
             andNumberOfFrames:[podImporter numberOfFrames]];
         _animationController.repeat = NO;
