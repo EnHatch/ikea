@@ -30,6 +30,7 @@
 		42186AF8156904550028A37E /* EHPickListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42186AF6156904550028A37E /* EHPickListViewController.xib */; };
 		42186AFC156909C60028A37E /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFA156909C60028A37E /* checked.png */; };
 		42186AFD156909C60028A37E /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFB156909C60028A37E /* unchecked.png */; };
+		42186B0015690E9A0028A37E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 42186AFF15690E990028A37E /* MBProgressHUD.m */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -428,6 +429,8 @@
 		42186AF6156904550028A37E /* EHPickListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPickListViewController.xib; sourceTree = "<group>"; };
 		42186AFA156909C60028A37E /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		42186AFB156909C60028A37E /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		42186AFE15690E990028A37E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Libraries/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		42186AFF15690E990028A37E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Libraries/MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1395,6 +1398,7 @@
 		2A2561231568181E008A5292 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				42186B0115690E9D0028A37E /* MBProgressHUD */,
 				427CA653156879F90079D123 /* DLStarRating */,
 				42BD570D15685D0400886F9D /* AFNetworking */,
 				4292C1E0156843D60069B518 /* isgl3d */,
@@ -1506,6 +1510,15 @@
 				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		42186B0115690E9D0028A37E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				42186AFE15690E990028A37E /* MBProgressHUD.h */,
+				42186AFF15690E990028A37E /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		427CA653156879F90079D123 /* DLStarRating */ = {
@@ -3761,6 +3774,7 @@
 				427CA6BE15687A800079D123 /* RatingTableCell.m in Sources */,
 				2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */,
 				42186AF7156904550028A37E /* EHPickListViewController.m in Sources */,
+				42186B0015690E9A0028A37E /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

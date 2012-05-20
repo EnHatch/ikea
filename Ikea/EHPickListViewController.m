@@ -6,9 +6,12 @@
 //  Copyright (c) 2012 Gargoyle Software. All rights reserved.
 //
 
+#import "MBProgressHUD.h"
+
 #import "EHPickListViewController.h"
 
 #import "Constants.h"
+#import "FurnitureAssemblyViewController.h"
 
 @interface EHPickListViewController ()
 
@@ -80,9 +83,34 @@
 
 - (void)cartWasFilled {
     // Show spinner
+#if 0
+    if (!self.progressHUD) {
+        MBProgressHUD *HUD = [[MBProgressHUD alloc] initWithView: self.view];
+        [self.view addSubview:HUD];
+        HUD.dimBackground = YES;
+        HUD.labelText = @"Inviting...";
 
+        self.progressHUD = HUD;
+        [HUD release];
+    }
+    [self.progressHUD show: YES];
+#else
+    // No need to retain (just a local variable)
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.labelText = @"Downloading";
 
-    // Load 3d
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+      // Do a taks in the background
+      sleep(3);
+      // Hide the HUD in the main tread
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+	// Load 3d
+	[self pushAssemblyController];
+      });
+    });
+
+#endif
 }
 
 #pragma mark - Navigation
