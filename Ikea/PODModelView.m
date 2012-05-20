@@ -154,7 +154,7 @@
         }
     }
 
-    //[self setupLight];
+    [self setupLight];
     //[self zeroCamera];
 
     // Schedule updates
@@ -179,6 +179,15 @@
 
 - (void) tick:(float)dt {
   [_cameraController update];
+}
+
+- (void) setupLight
+{
+    Isgl3dShadowCastingLight * light  = [Isgl3dShadowCastingLight lightWithHexColor:@"FFFFFF" diffuseColor:@"FFFFFF" specularColor:@"FFFFFF" attenuation:0.00];
+    light.position = self.activeCamera.eyePosition;
+    [light setLightType:DirectionalLight];
+    [self.scene addChild:light];
+    self.cameraController.light = light;
 }
 
 #pragma mark - Cleanup

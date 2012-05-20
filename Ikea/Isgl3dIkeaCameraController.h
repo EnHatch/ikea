@@ -36,6 +36,7 @@
 @property (nonatomic) float phi;
 @property (nonatomic) float damping;
 @property (nonatomic) BOOL doubleTapEnabled;
+@property (nonatomic, retain) Isgl3dShadowCastingLight *light;
 
 - (id)initWithNodeCamera:(Isgl3dNodeCamera *)camera andView:(Isgl3dView *)view;
 
