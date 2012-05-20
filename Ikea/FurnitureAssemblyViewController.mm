@@ -159,7 +159,8 @@
 }
 
 - (IBAction)playButtonWasPressed:(id)sender {
-    [self toggleAnimation];
+    //[self toggleAnimation];
+    [self.podModelView startAnimation];
 }
 
 #pragma mark - Animation

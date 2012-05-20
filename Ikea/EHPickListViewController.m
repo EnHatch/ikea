@@ -41,6 +41,11 @@
 
     self.navigationItem.title = @"Pick List";
 
+
+  UIBarButtonItem *skipButton = [[UIBarButtonItem alloc] initWithTitle:@"Instructions" style:UIBarButtonItemStyleBordered target:self action:@selector(skipWasPressed:)];
+    self.navigationItem.rightBarButtonItem = skipButton;
+  [skipButton release];
+
 }
 
 - (void)viewDidUnload
@@ -101,7 +106,7 @@
 
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
       // Do a taks in the background
-      sleep(3);
+      sleep(2);
       // Hide the HUD in the main tread
       dispatch_async(dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
@@ -241,6 +246,12 @@
 
 #pragma mark - UI Callbacks
 
+- (IBAction)skipWasPressed:(id)sender
+{
+
+    [self cartWasFilled];
+}
+
 - (IBAction)loadModalBarCodeScanner:(id)sender
 {
     ZBarReaderViewController *vc = [ZBarReaderViewController new];
@@ -296,8 +307,6 @@
     }
 
     [reader dismissModalViewControllerAnimated:YES];
-
-    //[self pushDetailView];
 
     if (barcode && barcodeType) {
         [self barcodeWasScanned: barcode
