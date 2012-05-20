@@ -157,6 +157,8 @@
         cell = (UITableViewCell *) [objects objectAtIndex: 0];
     }
 
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     if (!ratingBar) {ratingBar = (DLStarRatingControl*)[cell viewWithTag:1]; }
     if (!ratingLabel) { ratingLabel = (UILabel*)[cell viewWithTag:2]; }
     if (!reviewerLabel) { reviewerLabel = (UILabel*)[cell viewWithTag:1337]; }
