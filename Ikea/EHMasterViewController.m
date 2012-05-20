@@ -15,7 +15,7 @@
 #import "EHBarCodeViewController.h"
 
 @interface EHMasterViewController ()
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 @end
 
 @implementation EHMasterViewController
@@ -56,15 +56,6 @@
     
     self.navigationItem.title = @"Products";
     
-    UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [scanButton setFrame:CGRectMake(0, 0, 44, 33)];
-    [scanButton setImage:[UIImage imageNamed:@"barcodeicon.png"] forState:UIControlStateNormal];
-    [scanButton addTarget:self action:@selector(loadModalBarCodeScanner) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:scanButton];
-    self.navigationItem.rightBarButtonItem = rightButton;
-    [rightButton release];
-    [scanButton release];
 
     //self.tableView.separatorColor = [UIColor yellowColor];
     self.tableView.rowHeight = 110;

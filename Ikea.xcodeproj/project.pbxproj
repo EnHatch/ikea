@@ -26,6 +26,8 @@
 		421869491568F46F0028A37E /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869461568F46F0028A37E /* dollar sign.png */; };
 		4218694A1568F46F0028A37E /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869471568F46F0028A37E /* ikeaLogo.png */; };
 		4218694C1568FEF70028A37E /* Picklist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4218694B1568FEF70028A37E /* Picklist.plist */; };
+		42186AF7156904550028A37E /* EHPickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42186AF5156904550028A37E /* EHPickListViewController.m */; };
+		42186AF8156904550028A37E /* EHPickListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42186AF6156904550028A37E /* EHPickListViewController.xib */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -419,6 +421,9 @@
 		421869461568F46F0028A37E /* dollar sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar sign.png"; sourceTree = "<group>"; };
 		421869471568F46F0028A37E /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
 		4218694B1568FEF70028A37E /* Picklist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Picklist.plist; path = Resources/Data/Picklist.plist; sourceTree = SOURCE_ROOT; };
+		42186AF4156904550028A37E /* EHPickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPickListViewController.h; sourceTree = "<group>"; };
+		42186AF5156904550028A37E /* EHPickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPickListViewController.m; sourceTree = "<group>"; };
+		42186AF6156904550028A37E /* EHPickListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPickListViewController.xib; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1489,6 +1494,14 @@
 				2A8E9B4B15688EF000D032F3 /* GravuCon */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		42186AF9156904AB0028A37E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		427CA653156879F90079D123 /* DLStarRating */ = {
@@ -3106,6 +3119,9 @@
 				42E4AB88156813770089B3D3 /* EHMasterViewController.xib */,
 				42E4AB8B156813770089B3D3 /* EHDetailViewController.xib */,
 				2A25615415681985008A5292 /* EHBarCodeViewController.xib */,
+				42186AF4156904550028A37E /* EHPickListViewController.h */,
+				42186AF5156904550028A37E /* EHPickListViewController.m */,
+				42186AF6156904550028A37E /* EHPickListViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -3240,7 +3256,7 @@
 				4281973D156887BB00B0D031 /* Constants.h */,
 				4292C6311568443F0069B518 /* ViewControllers */,
 				427CA6B815687A3F0079D123 /* Table Cells */,
-				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
+				42186AF9156904AB0028A37E /* Model */,
 				42E4AB74156813770089B3D3 /* Supporting Files */,
 			);
 			path = Ikea;
@@ -3676,6 +3692,7 @@
 				421869491568F46F0028A37E /* dollar sign.png in Resources */,
 				4218694A1568F46F0028A37E /* ikeaLogo.png in Resources */,
 				4218694C1568FEF70028A37E /* Picklist.plist in Resources */,
+				42186AF8156904550028A37E /* EHPickListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3735,6 +3752,7 @@
 				427CA69B156879F90079D123 /* UIView+Subviews.m in Sources */,
 				427CA6BE15687A800079D123 /* RatingTableCell.m in Sources */,
 				2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */,
+				42186AF7156904550028A37E /* EHPickListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,11 +56,17 @@
 
     self.navigationItem.title = @"Product Name";
 
-    //UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
-    //self.navigationItem.rightBarButtonItem = rightButton;
-    //[rightButton release];
-
     self.navigationItem.title = [self.product objectForKey:@"Name"];
+    
+    UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [scanButton setFrame:CGRectMake(0, 0, 44, 33)];
+    [scanButton setImage:[UIImage imageNamed:@"barcodeicon.png"] forState:UIControlStateNormal];
+    [scanButton addTarget:self action:@selector(loadModalBarCodeScanner) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:scanButton];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
+    [scanButton release];
 
     NSLog(@"loaded detail with product: %@", self.product);
     NSString *detail = [self.product objectForKey:@"Detail"];
@@ -82,7 +88,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
 }
-
 
 - (void)viewDidUnload
 {
@@ -142,12 +147,12 @@
              barcode
              ];
 
-    for (NSDictionary *furniture in self.furnitureList) {
-        if ([[furniture objectForKey: KEY_BARCODE] isEqualToString: concatenatedBarcode]) {
-            [self navToProductDetail: furniture];
-            return;
-        }
-    }
+    //for (NSDictionary *furniture in self.furnitureList) {
+    //    if ([[furniture objectForKey: KEY_BARCODE] isEqualToString: concatenatedBarcode]) {
+    //        [self navToProductDetail: furniture];
+    //        return;
+    //    }
+    //}
     [self showInvalidBarcodeAlert];
     NSLog(@"Error. barcode not captured.");
 }

@@ -11,7 +11,7 @@
 
 @class EHDetailViewController;
 
-@interface EHMasterViewController : UIViewController <NSFetchedResultsControllerDelegate, ZBarReaderDelegate, UITableViewDataSource, UITableViewDataSource>
+@interface EHMasterViewController : UIViewController <NSFetchedResultsControllerDelegate, UITableViewDataSource, UITableViewDataSource>
 
 @property (strong, nonatomic) EHDetailViewController *detailViewController;
 
@@ -19,7 +19,5 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *furnitureList;
-
-- (IBAction)loadModalBarCodeScanner;
 
 @end
