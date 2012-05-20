@@ -148,6 +148,7 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIContentView" ref="201233327"/>
+				<string key="IBUIReuseIdentifier">EHCustomTableCell</string>
 				<real value="53" key="IBUIRowHeight"/>
 			</object>
 		</array>

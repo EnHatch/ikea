@@ -138,7 +138,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"EHCustomTableCell";
     
     UIImageView *productIV = nil;
     UILabel *productLabel = nil;

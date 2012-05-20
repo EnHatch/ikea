@@ -8,6 +8,7 @@
 
 #import "EHDetailViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "DLStarRatingControl.h"
 
 #import "FurnitureAssemblyViewController.h"
 
@@ -127,19 +128,34 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"RatingTableCell";
+
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //if (cell == nil) {
+    //    //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    //    cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    //   // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //}
+    
+    DLStarRatingControl *ratingBar = nil;
+    UILabel *ratingLabel = nil;
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-        cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-       // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"RatingTableCell" owner:self options:nil];
+        cell = (UITableViewCell *) [objects objectAtIndex: 0];
     }
+    
+    if (!ratingBar) {ratingBar = (DLStarRatingControl*)[cell viewWithTag:1]; }
+    if (!ratingLabel) { ratingLabel = (UILabel*)[cell viewWithTag:2]; }
 
     NSDictionary *review = [[self reviews] objectAtIndex: indexPath.row];
 
-    cell.textLabel.text = [review objectForKey: KEY_REVIEW];
-    cell.detailTextLabel.text = [[review objectForKey: KEY_STARS] stringValue];
+    //cell.textLabel.text = [review objectForKey: KEY_REVIEW];
+    //cell.detailTextLabel.text = [[review objectForKey: KEY_STARS] stringValue];
+
+    ratingBar.rating = [[review objectForKey: KEY_STARS] floatValue];
+    ratingLabel.text = [review objectForKey: KEY_REVIEW];
 
     return cell;
 }

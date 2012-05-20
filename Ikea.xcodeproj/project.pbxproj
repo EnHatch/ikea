@@ -31,6 +31,8 @@
 		427CA699156879F90079D123 /* star_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CA65D156879F90079D123 /* star_highlighted.png */; };
 		427CA69A156879F90079D123 /* star_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 427CA65E156879F90079D123 /* star_highlighted@2x.png */; };
 		427CA69B156879F90079D123 /* UIView+Subviews.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA660156879F90079D123 /* UIView+Subviews.m */; };
+		427CA6BB15687A620079D123 /* RatingTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 427CA6B915687A620079D123 /* RatingTableCell.xib */; };
+		427CA6BE15687A800079D123 /* RatingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA6BD15687A800079D123 /* RatingTableCell.m */; };
 		4292C630156843E90069B518 /* libisgl3d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4292C5EB156843DA0069B518 /* libisgl3d.a */; };
 		4292C63B156844760069B518 /* FurnitureAssemblyViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4292C639156844760069B518 /* FurnitureAssemblyViewController.mm */; };
 		4292C63C156844760069B518 /* FurnitureAssemblyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4292C63A156844760069B518 /* FurnitureAssemblyViewController.xib */; };
@@ -415,6 +417,9 @@
 		427CA65E156879F90079D123 /* star_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_highlighted@2x.png"; sourceTree = "<group>"; };
 		427CA65F156879F90079D123 /* UIView+Subviews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Subviews.h"; sourceTree = "<group>"; };
 		427CA660156879F90079D123 /* UIView+Subviews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Subviews.m"; sourceTree = "<group>"; };
+		427CA6BA15687A620079D123 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RatingTableCell.xib; sourceTree = "<group>"; };
+		427CA6BC15687A800079D123 /* RatingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingTableCell.h; sourceTree = "<group>"; };
+		427CA6BD15687A800079D123 /* RatingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingTableCell.m; sourceTree = "<group>"; };
 		4292C1E1156843D60069B518 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4292C1E2156843D60069B518 /* buildIsgl3dH.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildIsgl3dH.sh; sourceTree = "<group>"; };
 		4292C1E3156843D60069B518 /* buildTemplatePlist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildTemplatePlist.sh; sourceTree = "<group>"; };
@@ -1490,6 +1495,17 @@
 				427CA65E156879F90079D123 /* star_highlighted@2x.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		427CA6B815687A3F0079D123 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */,
+				427CA6B915687A620079D123 /* RatingTableCell.xib */,
+				427CA6BC15687A800079D123 /* RatingTableCell.h */,
+				427CA6BD15687A800079D123 /* RatingTableCell.m */,
+			);
+			name = "Table Cells";
 			sourceTree = "<group>";
 		};
 		4292C1E0156843D60069B518 /* isgl3d */ = {
@@ -3195,7 +3211,7 @@
 				42E4AB7C156813770089B3D3 /* EHAppDelegate.h */,
 				42E4AB7D156813770089B3D3 /* EHAppDelegate.m */,
 				4292C6311568443F0069B518 /* ViewControllers */,
-				2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */,
+				427CA6B815687A3F0079D123 /* Table Cells */,
 				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,
 				42E4AB74156813770089B3D3 /* Supporting Files */,
 			);
@@ -3626,6 +3642,7 @@
 				427CA698156879F90079D123 /* star_highlighted-darker@2x.png in Resources */,
 				427CA699156879F90079D123 /* star_highlighted.png in Resources */,
 				427CA69A156879F90079D123 /* star_highlighted@2x.png in Resources */,
+				427CA6BB15687A620079D123 /* RatingTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3683,6 +3700,7 @@
 				427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */,
 				427CA694156879F90079D123 /* DLStarView.m in Sources */,
 				427CA69B156879F90079D123 /* UIView+Subviews.m in Sources */,
+				427CA6BE15687A800079D123 /* RatingTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3710,6 +3728,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		427CA6B915687A620079D123 /* RatingTableCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				427CA6BA15687A620079D123 /* en */,
+			);
+			name = RatingTableCell.xib;
+			sourceTree = "<group>";
+		};
 		4292C493156843D60069B518 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
