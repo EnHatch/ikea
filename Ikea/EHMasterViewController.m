@@ -145,12 +145,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-       // cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
-       // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
         NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"EHCustomTableCell" owner:self options:nil];
         cell = (UITableViewCell *) [objects objectAtIndex: 0];
-        
     }
     
     //[self configureCell:cell atIndexPath:indexPath];
@@ -159,10 +155,9 @@
     if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
     
     NSDictionary *item = [self.furnitureList objectAtIndex:indexPath.row];
+
     [productIV setImageWithURL:[NSURL URLWithString:[item objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
-    
     productLabel.text = [item objectForKey:@"Name"];
-    productIV.image = [UIImage imageNamed:@"barcodeicon.png"];
     
     return cell;
 }
