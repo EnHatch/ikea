@@ -10,8 +10,6 @@
 
 @interface EHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 
-@property (strong, nonatomic) id detailItem;
-
 @property (strong, nonatomic) IBOutlet UITextView *detailsTV;
 @property (strong, nonatomic) IBOutlet UIImageView *productIV;
 

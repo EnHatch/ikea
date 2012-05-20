@@ -13,12 +13,10 @@
 #import "UIImageView+AFNetworking.h"
 
 @interface EHDetailViewController ()
-- (void)configureView;
 @end
 
 @implementation EHDetailViewController
 
-@synthesize detailItem = _detailItem;
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
 @synthesize assemblyButton = _assemblyButton;
@@ -39,47 +37,32 @@
 
 - (void)dealloc
 {
-    [_detailItem release];
     [super dealloc];
 }
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-  if (_detailItem != newDetailItem) {
-    [_detailItem release];
-    _detailItem = [newDetailItem retain];
-
-    // Update the view.
-    [self configureView];
-  }
-}
-
-- (void)configureView
-{
-  // Update the user interface for the detail item.
-
-  if (self.detailItem) {
-  }
-}
 
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
-  [self configureView];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
 
     self.navigationItem.title = @"Product Name";
 
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     [rightButton release];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
 
     self.navigationItem.title = [self.product objectForKey:@"Name"];
     
+    NSLog(@"loaded detail with product: %@", self.product);
     NSString *detail = [self.product objectForKey:@"Detail"];
     
     NSArray *details = [detail componentsSeparatedByString:@"~"];
@@ -94,7 +77,9 @@
     self.detailsTV.text = description;
     
     [self.productIV setImageWithURL:[NSURL URLWithString:[self.product objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
+
 }
+
 
 - (void)viewDidUnload
 {
