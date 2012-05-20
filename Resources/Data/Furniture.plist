@@ -48,6 +48,8 @@ Max. load: 50 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-amon-vika-adils-table__0148506_PE306802_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Amon</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666709909</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -76,6 +78,8 @@ Max. load: 50 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-glasholm-vika-adils-table__0148862_PE307206_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Glasholm</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666798804</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -104,6 +108,8 @@ Max. load: 50 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-annefors-table-leg-with-storage__0094035_PE231708_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Annefors</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666776604</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -136,6 +142,8 @@ Max load/shelf: 25 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-artur-trestle-with-shelf__0137982_PE296875_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Artur</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666046615</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
