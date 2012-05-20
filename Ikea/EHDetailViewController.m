@@ -126,7 +126,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
+    //NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
 
     //NSString *text = [review objectForKey: KEY_REVIEW];
     //CGFloat height = [text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(240,300) lineBreakMode:UILineBreakModeWordWrap].height;

@@ -15,6 +15,8 @@
 
 #define GL_VIEW_TAG 1337
 
+#define HIDE_NAVBAR_DELAY 2.0
+
 @interface FurnitureAssemblyViewController ()
 
 @end
@@ -53,7 +55,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
     [self initGestures];
     
     [self init3d];
@@ -68,6 +69,44 @@
 
     [[Isgl3dDirector sharedInstance] end];
     [[self.view viewWithTag: GL_VIEW_TAG] removeFromSuperview];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+
+    //[self hideNavbarWithDelay];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+
+    //[self hideNavbar];
+    [self hideNavbarWithDelay];
+}
+
+#pragma mark - View Manipulation
+
+- (void)hideNavbarWithDelay {
+    //if (withDelay) {
+    //    int parameter1 = 12;
+    //    float parameter2 = 144.1
+    //    // Delay execution of my block for 10 seconds.
+    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_current_queue(), ^{
+    //        NSLog(@"parameter1: %d parameter2: %f", parameter1, parameter2);
+    //        [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //    });
+    //} else {
+    //    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //}
+
+    [self performSelector: @selector(hideNavbar) withObject: nil afterDelay: HIDE_NAVBAR_DELAY];
+
+}
+
+- (void)hideNavbar {
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 #pragma mark - UI Callbacks
@@ -227,7 +266,7 @@
     
     [self.navigationController setNavigationBarHidden:NO animated:YES]; 
     
-    [self performSelector:@selector(hideNavigationBar:) withObject:nil afterDelay:1.5];
+    [self performSelector:@selector(hideNavigationBar:) withObject:nil afterDelay: HIDE_NAVBAR_DELAY];
 }
 
 - (IBAction)hideNavigationBar:(id)sender
