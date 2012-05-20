@@ -64,11 +64,13 @@
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
+    NSLog(@"FurnitureAssemblyViewController viewDidUnload");
     // Release any retained subviews of the main view.
 
     [[Isgl3dDirector sharedInstance] end];
     [[self.view viewWithTag: GL_VIEW_TAG] removeFromSuperview];
+    
+    [super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -21,7 +21,9 @@
 
 @synthesize detailsTV = _detailsTV;
 @synthesize productIV = _productIV;
+//@synthesize productButton = _productButton;
 @synthesize assemblyButton = _assemblyButton;
+
 @synthesize product = _product;
 
 #pragma mark - Initialization

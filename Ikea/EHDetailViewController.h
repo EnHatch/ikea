@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextView *detailsTV;
 @property (strong, nonatomic) IBOutlet UIImageView *productIV;
+//@property (strong, nonatomic) IBOutlet UIButton *productButton;
 
 @property (strong, nonatomic) IBOutlet UIButton *assemblyButton;
 
