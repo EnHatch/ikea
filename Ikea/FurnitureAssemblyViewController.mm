@@ -122,10 +122,34 @@
 
 - (IBAction)prevButtonWasPressed:(id)sender {
     [self.podModelView loadPrev];
+    
+    if (self.podModelView.modelIndex < 1) 
+    {
+        self.prevButton.hidden = YES;
+        self.playButton.hidden = YES;
+    }
+    else 
+    {
+        self.prevButton.hidden = NO;
+    }
+    
+    self.nextButton.hidden = NO;
 }
 
 - (IBAction)nextButtonWasPressed:(id)sender {
     [self.podModelView loadNext];
+        if (self.podModelView.modelIndex == 11) 
+    {
+        self.nextButton.hidden = YES;
+    }
+    else 
+    {
+        self.nextButton.hidden = NO;
+    }
+    
+    self.prevButton.hidden = NO;
+    self.playButton.hidden = NO;
+    
 }
 
 - (IBAction)infoButtonWasPressed:(id)sender {
@@ -236,6 +260,9 @@
     [glView addSubview:self.playButton];
     [glView addSubview:self.infoButton];
     [glView addSubview:self.captionView];
+    
+    self.prevButton.hidden = YES;
+    self.playButton.hidden = YES;
 
     // Add the OpenGL view to the view controller
     //_view = [glView retain];

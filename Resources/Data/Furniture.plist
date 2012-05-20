@@ -20,6 +20,10 @@ Height: 70 cm</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-alex-drawer-unit__0087723_PE217289_S4.JPG</string>
 			<key>Name</key>
 			<string>Vika Alex</string>
+			<key>Time</key>
+			<string>60 min</string>
+			<key>Price</key>
+			<string>79.99</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -48,6 +52,10 @@ Max. load: 50 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/vika-amon-vika-adils-table__0148506_PE306802_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Amon</string>
+			<key>Price</key>
+			<string>19.99</string>
+			<key>Time</key>
+			<string>40 min</string>
 			<key>Barcode</key>
 			<string>EAN-13:0082666709909</string>
 			<key>Reviews</key>
@@ -80,6 +88,10 @@ Max. load: 50 kg</string>
 			<string>VIKA Glasholm</string>
 			<key>Barcode</key>
 			<string>EAN-13:0082666798804</string>
+			<key>Price</key>
+			<string>39.99</string>
+			<key>Time</key>
+			<string>40 min</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -110,6 +122,10 @@ Max. load: 50 kg</string>
 			<string>VIKA Annefors</string>
 			<key>Barcode</key>
 			<string>EAN-13:0082666776604</string>
+			<key>Price</key>
+			<string>40.00</string>
+			<key>Time</key>
+			<string>35 min</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
@@ -138,6 +154,10 @@ Min. height: 71 cm~
 Max. height: 93 cm~
 Max. load: 50 kg~
 Max load/shelf: 25 kg</string>
+			<key>Price</key>
+			<string>30.00</string>
+			<key>Time</key>
+			<string>30 min</string>
 			<key>Image</key>
 			<string>http://www.ikea.com/us/en/images/products/vika-artur-trestle-with-shelf__0137982_PE296875_S4.JPG</string>
 			<key>Name</key>
@@ -176,6 +196,10 @@ Max. seat height: 58 cm~
 Max. load: 110 kg</string>
 			<key>Image</key>
 			<string>http://www.ikea.com/us/en/images/products/malkolm-swivel-chair__0120246_PE276706_S4.JPG</string>
+			<key>Price</key>
+			<string>99.99</string>
+			<key>Time</key>
+			<string>45 min</string>
 			<key>Name</key>
 			<string>Malkolm</string>
 			<key>Barcode</key>
@@ -214,6 +238,10 @@ Max. seat height: 53 cm~
 Max. load: 110 kg</string>
 			<key>Image</key>
 			<string>http://www.ikea.com/us/en/images/products/gregor-swivel-chair__0113408_PE265583_S4.JPG</string>
+			<key>Price</key>
+			<string>99.99</string>
+			<key>Time</key>
+			<string>45 min</string>
 			<key>Name</key>
 			<string>Gregor</string>
 			<key>Reviews</key>
@@ -242,6 +270,10 @@ Height: 149 cm~
 Max load/shelf: 13 kg</string>
 			<key>Image</key>
 			<string>http://www.ikea.com/us/en/images/products/expedit-shelving-unit__0115209_PE268430_S4.JPG</string>
+			<key>Price</key>
+			<string>89.99</string>
+			<key>Time</key>
+			<string>40 min</string>
 			<key>Name</key>
 			<string>Expedit</string>
 			<key>Reviews</key>
@@ -268,6 +300,10 @@ Depth: 50 cm~
 Height: 72 cm</string>
 			<key>Image</key>
 			<string>http://www.ikea.com/us/en/images/products/laiva-desk__0104919_PE252089_S4.JPG</string>
+			<key>Price</key>
+			<string>20.00</string>
+			<key>Time</key>
+			<string>50 min</string>
 			<key>Name</key>
 			<string>Laiva</string>
 			<key>Reviews</key>

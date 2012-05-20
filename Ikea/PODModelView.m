@@ -25,6 +25,7 @@
 @synthesize modelNames = _modelNames;
 @synthesize cameraController = _cameraController;
 @synthesize animationController = _animationController;
+@synthesize modelIndex = _modelIndex;
 
 #pragma mark - Initialization 
 
@@ -113,6 +114,8 @@
     _currentIndex--;
     [self loadModelWithIndex: _currentIndex];
   }
+  
+  self.modelIndex = _currentIndex;
 }
 
 - (void)loadNext {
@@ -123,6 +126,8 @@
     _currentIndex++;
     [self loadModelWithIndex: _currentIndex];
   }
+  
+  self.modelIndex = _currentIndex;
 }
 
 - (void)loadModelWithName:(NSString *)modelName {

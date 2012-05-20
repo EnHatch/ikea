@@ -35,6 +35,9 @@
 		2AAC14841568FF7E00F766A3 /* step9_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14791568FF7E00F766A3 /* step9_good.pod */; };
 		2AAC14851568FF7E00F766A3 /* step10_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147A1568FF7E00F766A3 /* step10_good.pod */; };
 		2AAC14861568FF7E00F766A3 /* step11_good.pod in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC147B1568FF7E00F766A3 /* step11_good.pod */; };
+		2AAC14E31569043900F766A3 /* bottombtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC14E21569043900F766A3 /* bottombtn.png */; };
+		2AAC152F1569091200F766A3 /* horizontal_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC152E1569091200F766A3 /* horizontal_line.png */; };
+		2AAC15311569091C00F766A3 /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAC15301569091C00F766A3 /* right_arrow.png */; };
 		421869481568F46F0028A37E /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869451568F46F0028A37E /* clock.png */; };
 		421869491568F46F0028A37E /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 421869461568F46F0028A37E /* dollar sign.png */; };
 		42186A38156902090028A37E /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186A37156902090028A37E /* ikeaLogo.png */; };
@@ -438,6 +441,9 @@
 		2AAC14791568FF7E00F766A3 /* step9_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step9_good.pod; sourceTree = "<group>"; };
 		2AAC147A1568FF7E00F766A3 /* step10_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step10_good.pod; sourceTree = "<group>"; };
 		2AAC147B1568FF7E00F766A3 /* step11_good.pod */ = {isa = PBXFileReference; lastKnownFileType = file; path = step11_good.pod; sourceTree = "<group>"; };
+		2AAC14E21569043900F766A3 /* bottombtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottombtn.png; sourceTree = "<group>"; };
+		2AAC152E1569091200F766A3 /* horizontal_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horizontal_line.png; sourceTree = "<group>"; };
+		2AAC15301569091C00F766A3 /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
 		421869451568F46F0028A37E /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
 		421869461568F46F0028A37E /* dollar sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar sign.png"; sourceTree = "<group>"; };
 		42186A37156902090028A37E /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
@@ -1502,6 +1508,7 @@
 		2A2561A7156829AC008A5292 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2AAC14E21569043900F766A3 /* bottombtn.png */,
 				2A8E9C391568A47A00D032F3 /* playbtn.png */,
 				2A8E9B4D156890F300D032F3 /* ikeaLogo.png */,
 				2A8E9B4915688D9C00D032F3 /* clock.png */,
@@ -3151,6 +3158,8 @@
 		4292C643156844A30069B518 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2AAC15301569091C00F766A3 /* right_arrow.png */,
+				2AAC152E1569091200F766A3 /* horizontal_line.png */,
 				42186A37156902090028A37E /* ikeaLogo.png */,
 				421869451568F46F0028A37E /* clock.png */,
 				421869461568F46F0028A37E /* dollar sign.png */,
@@ -3716,6 +3725,9 @@
 				421869481568F46F0028A37E /* clock.png in Resources */,
 				421869491568F46F0028A37E /* dollar sign.png in Resources */,
 				42186A38156902090028A37E /* ikeaLogo.png in Resources */,
+				2AAC14E31569043900F766A3 /* bottombtn.png in Resources */,
+				2AAC152F1569091200F766A3 /* horizontal_line.png in Resources */,
+				2AAC15311569091C00F766A3 /* right_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
