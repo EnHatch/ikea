@@ -29,6 +29,8 @@
 @synthesize prevButton = _prevButton;
 @synthesize playButton = _playButton;
 @synthesize infoButton = _infoButton;
+@synthesize captionTV = _captionTV;
+@synthesize captionView = _captionView;
 
 #pragma mark - Initialization
 
@@ -51,6 +53,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self initGestures];
+    
     [self init3d];
 }
 
@@ -74,6 +79,28 @@
 }
 
 - (IBAction)infoButtonWasPressed:(id)sender {
+    
+    if (self.captionView.frame.origin.y == 328)
+    {
+        //hide caption view
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.5];
+        CGRect frame = self.captionView.frame;
+        frame.origin.y = 460;
+        self.captionView.frame = frame;
+        [UIView commitAnimations];
+
+    }
+    else 
+    {
+        //show caption view
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.5];
+        CGRect frame = self.captionView.frame;
+        frame.origin.y = 328;
+        self.captionView.frame = frame;
+        [UIView commitAnimations];
+    }
     [self.podModelView toggleCaption];
 }
 
@@ -143,6 +170,7 @@
     [glView addSubview:self.prevButton];
     [glView addSubview:self.playButton];
     [glView addSubview:self.infoButton];
+    [glView addSubview:self.captionView];
 
     // Add the OpenGL view to the view controller
     //_view = [glView retain];
@@ -161,6 +189,48 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void)initGestures
+{
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.delegate = self;
+    [self.view addGestureRecognizer:singleTap];
+    [singleTap release];
+    
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    if([touch.view isKindOfClass:[UIButton class]])
+    {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (IBAction)singleTap:(id)sender
+{
+    if (self.captionView.frame.origin.y == 328) 
+    {
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:.5];
+        CGRect frame = self.captionView.frame;
+        frame.origin.y = 460;
+        self.captionView.frame = frame;
+        [UIView commitAnimations];
+    }
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES]; 
+    
+    [self performSelector:@selector(hideNavigationBar:) withObject:nil afterDelay:1.5];
+}
+
+- (IBAction)hideNavigationBar:(id)sender
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 #pragma mark - Cleanup
