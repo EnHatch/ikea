@@ -14,6 +14,7 @@
 
 #define KEY_REVIEWS @"Reviews"
 #define KEY_REVIEW @"Review"
+#define KEY_NAME @"Name"
 #define KEY_STARS @"Stars"
 
 @interface EHDetailViewController ()
@@ -114,7 +115,8 @@
     return reviews;
 }
 
-#pragma Mark - TableView methods
+#pragma Mark - UITableViewDataSource Methods
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -126,39 +128,55 @@
     return reviews.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
+
+    //if (video != @"empty") {
+    //    return labelSize.height + 136;
+    //}
+    //return labelSize.height + 36;
+    
+    //NSString *text = [review objectForKey: KEY_REVIEW];
+    //CGFloat height = [text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(240,300) lineBreakMode:UILineBreakModeWordWrap].height;
+
+    //return height + 40; 
+    return 200; 
+}
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"RatingTableCell";
 
-    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    //if (cell == nil) {
-    //    //cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    //    cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
-    //   // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    //}
-    
     DLStarRatingControl *ratingBar = nil;
     UILabel *ratingLabel = nil;
+    UILabel *reviewerLabel = nil;
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"RatingTableCell" owner:self options:nil];
         cell = (UITableViewCell *) [objects objectAtIndex: 0];
     }
-    
+
     if (!ratingBar) {ratingBar = (DLStarRatingControl*)[cell viewWithTag:1]; }
     if (!ratingLabel) { ratingLabel = (UILabel*)[cell viewWithTag:2]; }
+    if (!reviewerLabel) { reviewerLabel = (UILabel*)[cell viewWithTag:1337]; }
 
     NSDictionary *review = [[self reviews] objectAtIndex: indexPath.row];
-
-    //cell.textLabel.text = [review objectForKey: KEY_REVIEW];
-    //cell.detailTextLabel.text = [[review objectForKey: KEY_STARS] stringValue];
 
     ratingBar.rating = [[review objectForKey: KEY_STARS] floatValue];
     ratingLabel.text = [review objectForKey: KEY_REVIEW];
 
+    NSString *reviewerName = [review objectForKey: KEY_NAME];
+    reviewerLabel.text = [NSString stringWithFormat: @"%@:", 
+        reviewerName
+            ];
+    //NSLog(@"reviewerLabel: %@", reviewerLabel.text);
+    //reviewerLabel.text = [review objectForKey: KEY_NAME];
+
     return cell;
 }
+
+#pragma Mark - UITableViewDelegate Methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

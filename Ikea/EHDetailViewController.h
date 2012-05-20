@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *assemblyButton;
 
 @property (strong, nonatomic) NSDictionary *product;
+@property (nonatomic, readonly) NSArray *reviews;
 
 - (IBAction)assemblyButtonWasPressed:(id)sender;
 
