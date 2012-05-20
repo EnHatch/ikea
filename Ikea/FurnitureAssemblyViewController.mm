@@ -196,7 +196,7 @@
 -(void)initGestures
 {
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
-    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTapsRequired = 2;
     singleTap.delegate = self;
     [self.view addGestureRecognizer:singleTap];
     [singleTap release];
