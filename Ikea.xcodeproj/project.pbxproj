@@ -21,6 +21,10 @@
 		2A25615615681985008A5292 /* EHBarCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615415681985008A5292 /* EHBarCodeViewController.xib */; };
 		2A25615C156820E6008A5292 /* Furniture.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A25615B156820E6008A5292 /* Furniture.plist */; };
 		2A7D031D15686ECB0068AC82 /* EHAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D031C15686ECB0068AC82 /* EHAnimationController.m */; };
+		2A8E9B4815688D9500D032F3 /* dollar sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4715688D9500D032F3 /* dollar sign.png */; };
+		2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4915688D9C00D032F3 /* clock.png */; };
+		2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4B15688EF000D032F3 /* GravuCon */; };
+		2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A8E9B4D156890F300D032F3 /* ikeaLogo.png */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -406,6 +410,10 @@
 		2A2561B0156838A5008A5292 /* EHCustomTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHCustomTableCell.xib; sourceTree = "<group>"; };
 		2A7D031B15686ECB0068AC82 /* EHAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHAnimationController.h; sourceTree = "<group>"; };
 		2A7D031C15686ECB0068AC82 /* EHAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHAnimationController.m; sourceTree = "<group>"; };
+		2A8E9B4715688D9500D032F3 /* dollar sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dollar sign.png"; sourceTree = "<group>"; };
+		2A8E9B4915688D9C00D032F3 /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = "<group>"; };
+		2A8E9B4B15688EF000D032F3 /* GravuCon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GravuCon; sourceTree = "<group>"; };
+		2A8E9B4D156890F300D032F3 /* ikeaLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ikeaLogo.png; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1469,6 +1477,10 @@
 		2A2561A7156829AC008A5292 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2A8E9B4D156890F300D032F3 /* ikeaLogo.png */,
+				2A8E9B4915688D9C00D032F3 /* clock.png */,
+				2A8E9B4715688D9500D032F3 /* dollar sign.png */,
+				2A8E9B4B15688EF000D032F3 /* GravuCon */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -3650,6 +3662,10 @@
 				427CA699156879F90079D123 /* star_highlighted.png in Resources */,
 				427CA69A156879F90079D123 /* star_highlighted@2x.png in Resources */,
 				427CA6BB15687A620079D123 /* RatingTableCell.xib in Resources */,
+				2A8E9B4815688D9500D032F3 /* dollar sign.png in Resources */,
+				2A8E9B4A15688D9C00D032F3 /* clock.png in Resources */,
+				2A8E9B4C15688EF000D032F3 /* GravuCon in Resources */,
+				2A8E9B4E156890F300D032F3 /* ikeaLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

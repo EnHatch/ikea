@@ -55,16 +55,17 @@
 {
     [super viewDidLoad];
     
-    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont boldSystemFontOfSize:20.0];
-    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-    label.textAlignment = UITextAlignmentCenter;
-    label.textColor = [UIColor yellowColor]; 
-    self.navigationItem.titleView = label;
-    label.text = @"IKEA";
-    [label sizeToFit];
+//    UILabel *label = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+//    label.backgroundColor = [UIColor clearColor];
+//    label.font = [UIFont boldSystemFontOfSize:20.0];
+//    label.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+//    label.textAlignment = UITextAlignmentCenter;
+//    label.textColor = [UIColor yellowColor]; 
+//    self.navigationItem.titleView = label;
+//    label.text = @"Products";
+//    [label sizeToFit];
 
+    self.navigationItem.title = @"Products";
     
     UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [scanButton setFrame:CGRectMake(0, 0, 44, 33)];
@@ -77,7 +78,7 @@
     [scanButton release];
 
     //self.tableView.separatorColor = [UIColor yellowColor];
-    self.tableView.rowHeight = 53;
+    self.tableView.rowHeight = 110;
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"ikeanavbar.png"] forBarMetrics:UIBarMetricsDefault];
 }
@@ -145,6 +146,8 @@
     
     UIImageView *productIV = nil;
     UILabel *productLabel = nil;
+    UILabel *priceLabel = nil;
+    UILabel *timeLabel = nil;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -156,6 +159,10 @@
     
     if (!productIV) {productIV = (UIImageView*)[cell viewWithTag:1]; }
     if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:2]; }
+    if (!priceLabel) { priceLabel = (UILabel*)[cell viewWithTag:3]; }
+    if (!timeLabel) { timeLabel = (UILabel*)[cell viewWithTag:4]; }
+    
+   // productLabel.font = [UIFont fontWithName:@"Gravur-Condensed" size:24];
     
     NSDictionary *item = [self.furnitureList objectAtIndex:indexPath.row];
 
@@ -202,6 +209,7 @@
     //}
     
     [self navToProductDetail: [self.furnitureList objectAtIndex:indexPath.row]];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - Fetched results controller

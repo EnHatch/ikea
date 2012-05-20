@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>Detail</key>
+			<string>This is a white rectangular cabinet</string>
+			<key>Image</key>
+			<string>vikaalexstorage.png</string>
+			<key>Name</key>
+			<string>Vika Alex</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>David Yak</string>
+					<key>Review</key>
+					<string>Pretty simple piece of furniture, but a little complicated to assemble.  It helped that I have the 3D Ikea App</string>
+					<key>Stars</key>
+					<integer>4</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This is a white rectangular drawer unit</string>
+			<key>Image</key>
+			<string>vikaalexdrawer.png</string>
+			<key>Name</key>
+			<string>VIKA Amon</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Ed Aulopsky</string>
+					<key>Review</key>
+					<string>I don&apos;t like how many drawers this thing has, it&apos;s ridiculous and they are sooooo small, silly #ikeafail</string>
+					<key>Stars</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>vikaalexstorage.png</string>
+			<key>Name</key>
+			<string>VIKA Glasholm</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>annefors.png</string>
+			<key>Name</key>
+			<string>VIKA Annefors</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>artur.png</string>
+			<key>Name</key>
+			<string>VIKA Artur</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>malkolm.png</string>
+			<key>Name</key>
+			<string>Malkolm</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>gregor.png</string>
+			<key>Name</key>
+			<string>Gregor</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>expedit.png</string>
+			<key>Name</key>
+			<string>Expedit</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Detail</key>
+			<string>This piece is the perfect fit for any kitchen</string>
+			<key>Image</key>
+			<string>laiva.png</string>
+			<key>Name</key>
+			<string>Laiva</string>
+			<key>Reviews</key>
+			<array>
+				<dict>
+					<key>Name</key>
+					<string>Joe Blo</string>
+					<key>Review</key>
+					<string>This was great until I broke it during a particularly ACTIVE session...</string>
+					<key>Stars</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
