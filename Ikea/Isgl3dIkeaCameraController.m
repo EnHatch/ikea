@@ -216,7 +216,7 @@
 
             float changeInDistance = currentDistance - previousDistance;
             //_orbit += changeInDistance * 0.1;
-            _orbit -= changeInDistance * 0.1;
+            _orbit -= changeInDistance * 0.2;
         }
     }
 }
