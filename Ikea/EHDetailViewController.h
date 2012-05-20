@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZBarSDK.h"
 
 @interface EHDetailViewController : UIViewController <UITableViewDataSource, UITableViewDataSource>
 

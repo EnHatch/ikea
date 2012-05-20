@@ -13,6 +13,7 @@
 #import "FurnitureAssemblyViewController.h"
 
 #import "Constants.h"
+#import "EHPickListViewController.h"
 
 @interface EHDetailViewController ()
 @end
@@ -56,11 +57,17 @@
 
     self.navigationItem.title = @"Product Name";
 
-    //UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"44x26.jpg"] style:UIBarButtonItemStylePlain target:self action:@selector(assemblyButtonWasPressed:)];
-    //self.navigationItem.rightBarButtonItem = rightButton;
-    //[rightButton release];
-
     self.navigationItem.title = [self.product objectForKey:@"Name"];
+    
+    UIButton *scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [scanButton setFrame:CGRectMake(0, 0, 44, 33)];
+    [scanButton setImage:[UIImage imageNamed:@"barcodeicon.png"] forState:UIControlStateNormal];
+    [scanButton addTarget:self action:@selector(barcodeButtonWasPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:scanButton];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    [rightButton release];
+    [scanButton release];
 
     NSLog(@"loaded detail with product: %@", self.product);
     NSString *detail = [self.product objectForKey:@"Detail"];
@@ -83,28 +90,26 @@
     [super viewWillAppear: animated];
 }
 
-
 - (void)viewDidUnload
 {
   [super viewDidUnload];
   // Release any retained subviews of the main view.
 }
 
+
 #pragma mark - UI Callbacks
 
-- (IBAction)assemblyButtonWasPressed:(id)sender {
-  FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
-    fvc.navTitle = self.navigationItem.title;
-  [self.navigationController pushViewController: fvc
-                                      animated: YES];
-  [fvc release];
+- (IBAction)barcodeButtonWasPressed:(id)sender {
+    EHPickListViewController *plvc = [[EHPickListViewController alloc] init];
+    [self.navigationController pushViewController: plvc animated: YES];
+    [plvc release];
 }
 
-#pragma mark - Rotate
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+- (IBAction)assemblyButtonWasPressed:(id)sender {
+    FurnitureAssemblyViewController *fvc = [[FurnitureAssemblyViewController alloc] init];
+    [self.navigationController pushViewController: fvc
+                                      animated: YES];
+    [fvc release];
 }
 
 #pragma Mark - Data Helpers
@@ -114,6 +119,7 @@
     NSArray *reviews = [self.product objectForKey: KEY_REVIEWS];
     return reviews;
 }
+
 
 #pragma Mark - UITableViewDataSource Methods
 
@@ -178,6 +184,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+}
+
+#pragma mark - Rotate
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+  return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end
