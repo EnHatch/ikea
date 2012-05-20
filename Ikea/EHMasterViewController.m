@@ -24,6 +24,7 @@
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize furnitureList = _furnitureList;
+@synthesize tableView = _tableView;
 
 #pragma mark - Initialization
 

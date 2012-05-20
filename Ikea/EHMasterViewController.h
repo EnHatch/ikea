@@ -12,13 +12,13 @@
 
 @class EHDetailViewController;
 
-@interface EHMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, ZBarReaderDelegate>
+@interface EHMasterViewController : UIViewController <NSFetchedResultsControllerDelegate, ZBarReaderDelegate, UITableViewDataSource, UITableViewDataSource>
 
 @property (strong, nonatomic) EHDetailViewController *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *furnitureList;
 
 - (IBAction)loadModalBarCodeScanner;
