@@ -23,6 +23,8 @@
 
 @implementation FurnitureAssemblyViewController
 
+@synthesize glView = _glView;
+
 @synthesize modelWrapper = _modelWrapper;
 @synthesize podModelView = _podModelView;
 @synthesize animating = _animating;
@@ -30,9 +32,6 @@
 @synthesize nextButton = _nextButton;
 @synthesize prevButton = _prevButton;
 @synthesize playButton = _playButton;
-@synthesize infoButton = _infoButton;
-@synthesize captionTV = _captionTV;
-@synthesize captionView = _captionView;
 @synthesize navTitle = _navTitle;
 
 #pragma mark - Initialization
@@ -87,6 +86,13 @@
 
     //[self hideNavbar];
     [self hideNavbarWithDelay];
+  
+    NSLog(@"FurnitureAssemblyViewController view: %f, %f, %f, %f",
+            self.view.frame.origin.x,
+            self.view.frame.origin.y,
+            self.view.frame.size.width,
+            self.view.frame.size.height
+         );
 }
 
 #pragma mark - View Manipulation
@@ -152,32 +158,6 @@
     
 }
 
-- (IBAction)infoButtonWasPressed:(id)sender {
-    
-    if (self.captionView.frame.origin.y == 328)
-    {
-        //hide caption view
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:.5];
-        CGRect frame = self.captionView.frame;
-        frame.origin.y = 460;
-        self.captionView.frame = frame;
-        [UIView commitAnimations];
-
-    }
-    else 
-    {
-        //show caption view
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:.5];
-        CGRect frame = self.captionView.frame;
-        frame.origin.y = 328;
-        self.captionView.frame = frame;
-        [UIView commitAnimations];
-    }
-    [self.podModelView toggleCaption];
-}
-
 - (IBAction)playButtonWasPressed:(id)sender {
     [self toggleAnimation];
 }
@@ -238,7 +218,8 @@
     //[Isgl3dDirector sharedInstance].displayFPS = YES;
 
     // Create OpenGL view (here for OpenGL ES 1.1)
-    CGRect modelFrame = self.modelWrapper.frame;
+    //CGRect modelFrame = self.modelWrapper.frame;
+    CGRect modelFrame = self.view.bounds;
     NSLog(@"3d frame: %f, %f, %f, %f",
     modelFrame.origin.x,
     modelFrame.origin.y,
@@ -246,6 +227,14 @@
     modelFrame.size.height);
     Isgl3dEAGLView * glView = [Isgl3dEAGLView viewWithFrameForES1: modelFrame];
     glView.tag = GL_VIEW_TAG;
+
+    [glView addSubview:self.nextButton];
+    [glView addSubview:self.prevButton];
+    [glView addSubview:self.playButton];
+    
+    self.prevButton.hidden = YES;
+    self.playButton.hidden = YES;
+    
     // Set view in director
     [Isgl3dDirector sharedInstance].openGLView = glView;
 
@@ -255,19 +244,11 @@
     // Set the animation frame rate
     [[Isgl3dDirector sharedInstance] setAnimationInterval:1.0/60];
 
-    [glView addSubview:self.nextButton];
-    [glView addSubview:self.prevButton];
-    [glView addSubview:self.playButton];
-    [glView addSubview:self.infoButton];
-    [glView addSubview:self.captionView];
-    
-    self.prevButton.hidden = YES;
-    self.playButton.hidden = YES;
-
     // Add the OpenGL view to the view controller
     //_view = [glView retain];
     //self.view = glView;
     [self.view addSubview: glView];
+    self.glView = glView;
 
     // Creates the view(s) and adds them to the director
     [self createViews];
@@ -282,6 +263,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+#pragma mark - Gestures
 
 -(void)initGestures
 {
@@ -305,15 +288,6 @@
 
 - (IBAction)singleTap:(id)sender
 {
-    if (self.captionView.frame.origin.y == 328) 
-    {
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:.5];
-        CGRect frame = self.captionView.frame;
-        frame.origin.y = 460;
-        self.captionView.frame = frame;
-        [UIView commitAnimations];
-    }
     
     [self.navigationController setNavigationBarHidden:NO animated:YES]; 
     
@@ -334,7 +308,8 @@
   self.nextButton = nil;
   self.prevButton = nil;
   self.playButton = nil;
-  self.infoButton = nil;
+  
+  self.glView = nil;
 
   [[Isgl3dDirector sharedInstance] end];
 

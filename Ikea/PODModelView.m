@@ -49,7 +49,6 @@
 
 - (void)toggleCaption {
     NSLog(@"toggleCaption");
-
 }
 
 - (void)pauseAnimation {
@@ -158,6 +157,25 @@
             self.animationController = nil;
         }
     }
+  
+  NSLog(@"viewPort: %f, %f, %f, %f",
+      self.viewport.origin.x,
+      self.viewport.origin.y,
+      self.viewport.size.width,
+      self.viewport.size.height
+  );
+
+  Isgl3dNodeCamera *cam = (Isgl3dNodeCamera *)self.defaultCamera;
+  Isgl3dMatrix4 viewMatrix = cam.viewMatrix;
+  NSLog(@"viewMatrix:    \
+         %f, %f, %f, %f, \
+         %f, %f, %f, %f, \
+         %f, %f, %f, %f, \
+         %f, %f, %f, %f", \
+        viewMatrix.m00, viewMatrix.m01, viewMatrix.m02, viewMatrix.m03,
+        viewMatrix.m10, viewMatrix.m11, viewMatrix.m12, viewMatrix.m13,
+        viewMatrix.m20, viewMatrix.m21, viewMatrix.m22, viewMatrix.m23,
+        viewMatrix.m30, viewMatrix.m31, viewMatrix.m32, viewMatrix.m33);
 
     [self setupLight];
     //[self zeroCamera];

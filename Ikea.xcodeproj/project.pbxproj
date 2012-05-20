@@ -46,6 +46,7 @@
 		42186AFC156909C60028A37E /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFA156909C60028A37E /* checked.png */; };
 		42186AFD156909C60028A37E /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFB156909C60028A37E /* unchecked.png */; };
 		42186B0015690E9A0028A37E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 42186AFF15690E990028A37E /* MBProgressHUD.m */; };
+		424DE17F1569246000092EE0 /* PickListTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 424DE17E1569246000092EE0 /* PickListTableCell.xib */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -459,6 +460,7 @@
 		42186AFB156909C60028A37E /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		42186AFE15690E990028A37E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Libraries/MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
 		42186AFF15690E990028A37E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Libraries/MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		424DE17E1569246000092EE0 /* PickListTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickListTableCell.xib; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -1584,6 +1586,7 @@
 				427CA6B915687A620079D123 /* RatingTableCell.xib */,
 				427CA6BC15687A800079D123 /* RatingTableCell.h */,
 				427CA6BD15687A800079D123 /* RatingTableCell.m */,
+				424DE17E1569246000092EE0 /* PickListTableCell.xib */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -3766,6 +3769,7 @@
 				2AAC14E31569043900F766A3 /* bottombtn.png in Resources */,
 				2AAC152F1569091200F766A3 /* horizontal_line.png in Resources */,
 				2AAC15311569091C00F766A3 /* right_arrow.png in Resources */,
+				424DE17F1569246000092EE0 /* PickListTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3940,7 +3944,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -3957,7 +3961,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -3970,6 +3974,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
 				INFOPLIST_FILE = "Ikea/Ikea-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ZBarSDK\"",
@@ -3986,6 +3991,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ikea/Ikea-Prefix.pch";
 				INFOPLIST_FILE = "Ikea/Ikea-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/ZBarSDK\"",

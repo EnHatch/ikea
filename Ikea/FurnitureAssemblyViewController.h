@@ -20,11 +20,9 @@
 @property (nonatomic, retain) IBOutlet UIButton *nextButton;
 @property (nonatomic, retain) IBOutlet UIButton *prevButton;
 @property (nonatomic, retain) IBOutlet UIButton *playButton;
-@property (nonatomic, retain) IBOutlet UIButton *infoButton;
-@property (nonatomic, retain) IBOutlet UIView *captionView;
-@property (nonatomic, retain) IBOutlet UITextView *captionTV;
 
 @property (nonatomic, retain) NSString *navTitle;
+@property (nonatomic, retain) Isgl3dEAGLView * glView;
 
 @property (getter=isAnimating)BOOL animating;
 

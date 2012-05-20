@@ -139,24 +139,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PickListCell";
+    static NSString *CellIdentifier = @"PickListTableCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    UIImageView *checkImageView = nil;
+    UILabel *productLabel = nil;
+    UILabel *detailLabel = nil;
 
     if (cell == nil) {
-      cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+      //cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	NSArray *objects = [[NSBundle mainBundle] loadNibNamed:@"PickListTableCell" owner:self options:nil];
+	cell = (UITableViewCell *) [objects objectAtIndex: 0];
     }
+    
+    if (!productLabel) { productLabel = (UILabel*)[cell viewWithTag:1]; }
+    if (!detailLabel) { detailLabel = (UILabel*)[cell viewWithTag:2]; }
+    if (!checkImageView) {checkImageView = (UIImageView*)[cell viewWithTag:3]; }
 
     NSDictionary *item = [self.pickList objectAtIndex:indexPath.row];
 
     NSLog(@"cell for item: %@", item);
 
-    cell.textLabel.text = [item objectForKey: KEY_NAME];
+    productLabel.text = [item objectForKey: KEY_NAME];
+    detailLabel.text  = [item objectForKey: KEY_BARCODE];
 
     if ([self isItemInCart: item]) {
 	NSLog(@"ITEM IN CART! %@", item);
-	cell.imageView.image = [UIImage imageNamed: @"checked"];
+	checkImageView.image = [UIImage imageNamed: @"checked"];
     } else {
-	cell.imageView.image = [UIImage imageNamed: @"unchecked"];
+	checkImageView.image = [UIImage imageNamed: @"unchecked"];
     }
 
     return cell;
