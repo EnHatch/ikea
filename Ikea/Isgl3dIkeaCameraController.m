@@ -25,6 +25,8 @@
 
 #import "Isgl3dIkeaCameraController.h"
 
+#define DAMPING_FACTOR .785
+
 
 @interface Isgl3dIkeaCameraController () {
     @private
@@ -155,8 +157,8 @@
 
 
     // Add damping to camera velocities
-    _vTheta *= 0.99;
-    _vPhi *= 0.99;
+    _vTheta *= DAMPING_FACTOR;
+    _vPhi   *= DAMPING_FACTOR;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
