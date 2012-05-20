@@ -16,15 +16,18 @@
 
 @implementation EHPickListViewController
 
+@synthesize shoppingCart = _shoppingCart;
 @synthesize pickList = _pickList;
+@synthesize tableView = _tableView;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         NSDictionary *pickPlist = [NSDictionary dictionaryWithContentsOfFile: [[NSBundle mainBundle] pathForResource:@"Picklist"ofType:@"plist"]];        
         self.pickList = [pickPlist objectForKey: @"Items"];
+        self.shoppingCart = [NSMutableSet set];
     }
     return self;
 }
@@ -33,11 +36,6 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -50,6 +48,31 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Cart Management
+
+- (BOOL)isItemInCart:(NSDictionary *)furniture {
+    BOOL itemInCart = [self.shoppingCart containsObject: furniture];
+
+    if (itemInCart) {
+
+	return YES;
+    } else {
+	return NO;
+    }
+}
+
+- (void)addItemToCart:(NSDictionary *)furniture {
+    NSLog(@"addItemToCart: %@", furniture);
+
+    [self.shoppingCart addObject: furniture];
+    NSIndexSet *sections = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(
+            0,
+            1
+    )];
+    [self.tableView reloadSections:sections
+                  withRowAnimation:UITableViewRowAnimationFade];
 }
 
 #pragma mark - Table view data source
@@ -77,7 +100,16 @@
     
     NSDictionary *item = [self.pickList objectAtIndex:indexPath.row];
 
+    NSLog(@"cell for item: %@", item);
+
     cell.textLabel.text = [item objectForKey: KEY_NAME];
+    
+    if ([self isItemInCart: item]) {
+	NSLog(@"ITEM IN CART! %@", item);
+	cell.imageView.image = [UIImage imageNamed: @"checked"];
+    } else {
+	cell.imageView.image = [UIImage imageNamed: @"unchecked"];
+    }
     
     return cell;
 }
@@ -133,6 +165,87 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+}
+
+#pragma mark - Alerts
+
+- (void)showInvalidBarcodeAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Unknown Barcode"
+                                                  message: @"We don't know this barcode!"
+                                                 delegate: nil
+                                        cancelButtonTitle: @"OK"
+                                        otherButtonTitles: nil];
+    [alert show];
+    [alert release];
+}
+
+#pragma mark - UI Callbacks
+
+- (IBAction)loadModalBarCodeScanner:(id)sender
+{
+    ZBarReaderViewController *vc = [ZBarReaderViewController new];
+    vc.readerDelegate = self;
+    
+    [vc.scanner setSymbology:ZBAR_QRCODE config:ZBAR_CFG_ENABLE to:0];
+    vc.readerView.zoom = 1.0;
+    
+    [self presentModalViewController:vc animated:YES];
+}
+
+
+#pragma mark - Barcode Reading
+
+- (void)barcodeWasScanned:(NSString *)barcode
+                 withType:(NSString *)barcodeType
+{
+    NSString *concatenatedBarcode = [NSString stringWithFormat: @"%@:%@", 
+             barcodeType,
+             barcode
+             ];
+    NSLog(@"barcodeWasScanned:: %@", concatenatedBarcode);
+
+    for (NSDictionary *furniture in self.pickList) {
+        if ([[furniture objectForKey: KEY_BARCODE] isEqualToString: concatenatedBarcode]) {
+            [self addItemToCart: furniture];
+            return;
+        }
+    }
+    [self showInvalidBarcodeAlert];
+    NSLog(@"Error. barcode not captured.");
+}
+
+#pragma mark - ZBarReaderDelegate
+
+- (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    id<NSFastEnumeration> results = [info objectForKey:ZBarReaderControllerResults];
+    //UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    NSLog(@"Results: %@", results);
+
+    NSString *barcode = nil;
+    NSString *barcodeType = nil;
+
+    for(ZBarSymbol *symbol in results) {
+        // process result
+        NSLog(@"symbol type: %@", symbol.typeName);
+        NSLog(@"symbol data: %@", symbol.data);
+
+        barcode = symbol.data;
+        barcodeType = symbol.typeName;
+    }
+    
+    [reader dismissModalViewControllerAnimated:YES];
+    
+    //[self pushDetailView];
+
+    if (barcode && barcodeType) {
+        [self barcodeWasScanned: barcode
+                       withType: barcodeType];
+    } else {
+        NSLog(@"Error. barcode not captured.");
+    }
 }
 
 @end

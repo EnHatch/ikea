@@ -32,18 +32,18 @@
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUIView" id="306678798">
+			<object class="IBUIView" id="463672680">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUITableView" id="873029372">
-						<reference key="NSNextResponder" ref="306678798"/>
+						<reference key="NSNextResponder" ref="463672680"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrameSize">{320, 399}</string>
-						<reference key="NSSuperview" ref="306678798"/>
+						<string key="NSFrameSize">{320, 391}</string>
+						<reference key="NSSuperview" ref="463672680"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="184217540"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="613478897">
+						<reference key="NSNextKeyView" ref="395061075"/>
+						<object class="NSColor" key="IBUIBackgroundColor" id="105219580">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
 						</object>
@@ -60,11 +60,11 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUIButton" id="184217540">
-						<reference key="NSNextResponder" ref="306678798"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 399}, {320, 37}}</string>
-						<reference key="NSSuperview" ref="306678798"/>
+					<object class="IBUIButton" id="395061075">
+						<reference key="NSNextResponder" ref="463672680"/>
+						<int key="NSvFlags">264</int>
+						<string key="NSFrame">{{0, 394}, {320, 37}}</string>
+						<reference key="NSSuperview" ref="463672680"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -74,7 +74,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">Scan Item</string>
-						<reference key="IBUIHighlightedTitleColor" ref="613478897"/>
+						<reference key="IBUIHighlightedTitleColor" ref="105219580"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
@@ -118,9 +118,17 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">view</string>
 						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="463672680"/>
+					</object>
+					<int key="connectionID">11</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">tableView</string>
+						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="873029372"/>
 					</object>
-					<int key="connectionID">5</int>
+					<int key="connectionID">12</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -137,6 +145,15 @@
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">7</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">loadModalBarCodeScanner:</string>
+						<reference key="source" ref="395061075"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">13</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -160,22 +177,22 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="306678798"/>
+						<reference key="object" ref="463672680"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="873029372"/>
-							<reference ref="184217540"/>
+							<reference ref="395061075"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
 						<reference key="object" ref="873029372"/>
-						<reference key="parent" ref="306678798"/>
+						<reference key="parent" ref="463672680"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">9</int>
-						<reference key="object" ref="184217540"/>
-						<reference key="parent" ref="306678798"/>
+						<int key="objectID">10</int>
+						<reference key="object" ref="395061075"/>
+						<reference key="parent" ref="463672680"/>
 					</object>
 				</array>
 			</object>
@@ -184,21 +201,43 @@
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">9</int>
+			<int key="maxID">13</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">EHPickListViewController</string>
-					<string key="superclassName">UITableViewController</string>
+					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">loadModalBarCodeScanner:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">loadModalBarCodeScanner:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">loadModalBarCodeScanner:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">tableView</string>
+						<string key="NS.object.0">UITableView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">tableView</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">tableView</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/EHPickListViewController.h</string>

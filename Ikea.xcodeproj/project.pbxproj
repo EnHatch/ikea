@@ -28,6 +28,8 @@
 		4218694C1568FEF70028A37E /* Picklist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4218694B1568FEF70028A37E /* Picklist.plist */; };
 		42186AF7156904550028A37E /* EHPickListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42186AF5156904550028A37E /* EHPickListViewController.m */; };
 		42186AF8156904550028A37E /* EHPickListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42186AF6156904550028A37E /* EHPickListViewController.xib */; };
+		42186AFC156909C60028A37E /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFA156909C60028A37E /* checked.png */; };
+		42186AFD156909C60028A37E /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 42186AFB156909C60028A37E /* unchecked.png */; };
 		425B4F3E1568467F00CFA829 /* 129x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3D1568467F00CFA829 /* 129x120.jpg */; };
 		425B4F40156846EA00CFA829 /* 44x26.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 425B4F3F156846EA00CFA829 /* 44x26.jpg */; };
 		427CA693156879F90079D123 /* DLStarRatingControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 427CA655156879F90079D123 /* DLStarRatingControl.m */; };
@@ -424,6 +426,8 @@
 		42186AF4156904550028A37E /* EHPickListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPickListViewController.h; sourceTree = "<group>"; };
 		42186AF5156904550028A37E /* EHPickListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPickListViewController.m; sourceTree = "<group>"; };
 		42186AF6156904550028A37E /* EHPickListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPickListViewController.xib; sourceTree = "<group>"; };
+		42186AFA156909C60028A37E /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		42186AFB156909C60028A37E /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		425B4F3D1568467F00CFA829 /* 129x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 129x120.jpg; sourceTree = "<group>"; };
 		425B4F3F156846EA00CFA829 /* 44x26.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 44x26.jpg; sourceTree = "<group>"; };
 		427CA654156879F90079D123 /* DLStarRatingControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStarRatingControl.h; sourceTree = "<group>"; };
@@ -3147,6 +3151,8 @@
 		4292C643156844A30069B518 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				42186AFA156909C60028A37E /* checked.png */,
+				42186AFB156909C60028A37E /* unchecked.png */,
 				421869451568F46F0028A37E /* clock.png */,
 				421869461568F46F0028A37E /* dollar sign.png */,
 				421869471568F46F0028A37E /* ikeaLogo.png */,
@@ -3693,6 +3699,8 @@
 				4218694A1568F46F0028A37E /* ikeaLogo.png in Resources */,
 				4218694C1568FEF70028A37E /* Picklist.plist in Resources */,
 				42186AF8156904550028A37E /* EHPickListViewController.xib in Resources */,
+				42186AFC156909C60028A37E /* checked.png in Resources */,
+				42186AFD156909C60028A37E /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
