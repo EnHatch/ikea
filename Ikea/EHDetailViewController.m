@@ -131,11 +131,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *review = [self.reviews objectAtIndex:indexPath.row];
 
-    //if (video != @"empty") {
-    //    return labelSize.height + 136;
-    //}
-    //return labelSize.height + 36;
-    
     //NSString *text = [review objectForKey: KEY_REVIEW];
     //CGFloat height = [text sizeWithFont:[UIFont systemFontOfSize:13] constrainedToSize:CGSizeMake(240,300) lineBreakMode:UILineBreakModeWordWrap].height;
 
