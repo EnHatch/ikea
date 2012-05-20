@@ -52,6 +52,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self init3d];
+
+    self.navigationItem.title = @"3D";
 }
 
 - (void)viewDidUnload
