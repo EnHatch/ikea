@@ -108,7 +108,7 @@
   PODModelView *view = [[PODModelView alloc] initWithModelNames:modelNames];
 #endif
 
-  view.displayFPS = YES;
+  //view.displayFPS = YES;
   [[Isgl3dDirector sharedInstance] addView:view];
 
   self.podModelView = view;
