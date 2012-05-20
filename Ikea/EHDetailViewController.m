@@ -12,10 +12,7 @@
 
 #import "FurnitureAssemblyViewController.h"
 
-#define KEY_REVIEWS @"Reviews"
-#define KEY_REVIEW @"Review"
-#define KEY_NAME @"Name"
-#define KEY_STARS @"Stars"
+#import "Constants.h"
 
 @interface EHDetailViewController ()
 @end

@@ -21,7 +21,6 @@
 
 @property (strong, nonatomic) NSArray *furnitureList;
 
-- (IBAction)pushDetailView;
 - (IBAction)loadModalBarCodeScanner;
 
 @end

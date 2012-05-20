@@ -5,6 +5,8 @@
 	<key>items</key>
 	<array>
 		<dict>
+			<key>Barcode</key>
+			<string>EAN-13:0082666754404</string>
 			<key>Detail</key>
 			<string>Width: 14 1/8 &quot;~
 Depth: 22 7/8 &quot;~

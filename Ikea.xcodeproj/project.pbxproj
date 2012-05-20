@@ -420,6 +420,7 @@
 		427CA6BA15687A620079D123 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RatingTableCell.xib; sourceTree = "<group>"; };
 		427CA6BC15687A800079D123 /* RatingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingTableCell.h; sourceTree = "<group>"; };
 		427CA6BD15687A800079D123 /* RatingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingTableCell.m; sourceTree = "<group>"; };
+		4281973D156887BB00B0D031 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4292C1E1156843D60069B518 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4292C1E2156843D60069B518 /* buildIsgl3dH.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildIsgl3dH.sh; sourceTree = "<group>"; };
 		4292C1E3156843D60069B518 /* buildTemplatePlist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildTemplatePlist.sh; sourceTree = "<group>"; };
@@ -3210,6 +3211,7 @@
 				4292C632156844440069B518 /* 3d */,
 				42E4AB7C156813770089B3D3 /* EHAppDelegate.h */,
 				42E4AB7D156813770089B3D3 /* EHAppDelegate.m */,
+				4281973D156887BB00B0D031 /* Constants.h */,
 				4292C6311568443F0069B518 /* ViewControllers */,
 				427CA6B815687A3F0079D123 /* Table Cells */,
 				42E4AB7F156813770089B3D3 /* Ikea.xcdatamodeld */,

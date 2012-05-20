@@ -6,11 +6,13 @@
 //  Copyright (c) 2012 Gargoyle Software. All rights reserved.
 //
 
+#import "UIImageView+AFNetworking.h"
+
 #import "EHMasterViewController.h"
 
+#import "Constants.h"
 #import "EHDetailViewController.h"
 #import "EHBarCodeViewController.h"
-#import "UIImageView+AFNetworking.h"
 
 @interface EHMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -197,12 +199,8 @@
     //if (!self.detailViewController) {
     //    self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
     //}
-    self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
-
     
-    self.detailViewController.product = [self.furnitureList objectAtIndex:indexPath.row];
-
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    [self navToProductDetail: [self.furnitureList objectAtIndex:indexPath.row]];
 }
 
 #pragma mark - Fetched results controller
@@ -306,12 +304,6 @@
 
 #pragma mark - UI Callbacks
 
-- (IBAction)pushDetailView
-{
-    EHDetailViewController *vc = [[EHDetailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 - (IBAction)loadModalBarCodeScanner
 {
     ZBarReaderViewController *vc = [ZBarReaderViewController new];
@@ -323,6 +315,49 @@
     [self presentModalViewController:vc animated:YES];
 }
 
+#pragma mark - Alerts
+
+- (void)showInvalidBarcodeAlert
+{
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Unknown Barcode"
+                                                  message: @"We don't know this barcode!"
+                                                 delegate: nil
+                                        cancelButtonTitle: @"OK"
+                                        otherButtonTitles: nil];
+  [alert show];
+  [alert release];
+}
+
+#pragma mark - Navigation
+
+- (void)navToProductDetail:(NSDictionary *)product {
+    self.detailViewController = [[[EHDetailViewController alloc] initWithNibName:@"EHDetailViewController" bundle:nil] autorelease];
+
+    self.detailViewController.product = product;
+
+    [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
+
+#pragma mark - Barcode Reading
+
+- (void)loadFurnitureWithBarcode:(NSString *)barcode
+                     barcodeType:(NSString *)barcodeType
+{
+    NSString *concatenatedBarcode = [NSString stringWithFormat: @"%@:%@", 
+             barcodeType,
+             barcode
+             ];
+
+    for (NSDictionary *furniture in self.furnitureList) {
+        if ([[furniture objectForKey: KEY_BARCODE] isEqualToString: concatenatedBarcode]) {
+            [self navToProductDetail: furniture];
+            return;
+        }
+    }
+    [self showInvalidBarcodeAlert];
+    NSLog(@"Error. barcode not captured.");
+}
+
 #pragma mark - ZBarReaderDelegate
 
 - (void) imagePickerController: (UIImagePickerController*)reader didFinishPickingMediaWithInfo:(NSDictionary *)info
@@ -332,15 +367,28 @@
     
     NSLog(@"Results: %@", results);
 
+    NSString *barcode = nil;
+    NSString *barcodeType = nil;
+
     for(ZBarSymbol *symbol in results) {
         // process result
         NSLog(@"symbol type: %@", symbol.typeName);
         NSLog(@"symbol data: %@", symbol.data);
+
+        barcode = symbol.data;
+        barcodeType = symbol.typeName;
     }
     
     [reader dismissModalViewControllerAnimated:YES];
     
-    [self pushDetailView];
+    //[self pushDetailView];
+
+    if (barcode && barcodeType) {
+        [self loadFurnitureWithBarcode: barcode
+                           barcodeType: barcodeType];
+    } else {
+        NSLog(@"Error. barcode not captured.");
+    }
 }
 
 @end
