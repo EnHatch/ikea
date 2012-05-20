@@ -6,9 +6,16 @@
 	<array>
 		<dict>
 			<key>Detail</key>
-			<string>This is a white rectangular cabinet</string>
+			<string>Width: 14 1/8 &quot;~
+Depth: 22 7/8 &quot;~
+Height: 27 1/2 &quot;~
+
+
+Width: 36 cm~
+Depth: 58 cm~
+Height: 70 cm</string>
 			<key>Image</key>
-			<string>vikaalexstorage.png</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-alex-drawer-unit__0087723_PE217289_S4.JPG</string>
 			<key>Name</key>
 			<string>Vika Alex</string>
 			<key>Reviews</key>
@@ -25,9 +32,18 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This is a white rectangular drawer unit</string>
+			<string>Length: 47 1/4 &quot;~
+Width: 23 5/8 &quot;~
+Height: 29 1/8 &quot;~
+Max. load: 110 lb 4 oz~
+
+
+Length: 120 cm~
+Width: 60 cm~
+Height: 74 cm~
+Max. load: 50 kg</string>
 			<key>Image</key>
-			<string>vikaalexdrawer.png</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-amon-vika-adils-table__0148506_PE306802_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Amon</string>
 			<key>Reviews</key>
@@ -44,9 +60,18 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Length: 39 &quot;~
+Width: 20 1/2 &quot;~
+Height: 28 &quot;~
+Max. load: 110 lb 4 oz~
+
+
+Length: 99 cm~
+Width: 52 cm~
+Height: 71 cm~
+Max. load: 50 kg</string>
 			<key>Image</key>
-			<string>vikaalexstorage.png</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-glasholm-vika-adils-table__0148862_PE307206_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Glasholm</string>
 			<key>Reviews</key>
@@ -63,9 +88,18 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Width: 13 3/4 &quot;~
+Depth: 22 7/8 &quot;~
+Height: 27 1/2 &quot;~
+Max. load: 110 lb~
+
+
+Width: 35 cm~
+Depth: 58 cm~
+Height: 70 cm~
+Max. load: 50 kg</string>
 			<key>Image</key>
-			<string>annefors.png</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-annefors-table-leg-with-storage__0094035_PE231708_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Annefors</string>
 			<key>Reviews</key>
@@ -82,9 +116,22 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Width: 18 1/8 &quot;~
+Depth: 27 1/2 &quot;~
+Min. height: 28 &quot;~
+Max. height: 36 5/8 &quot;~
+Max. load: 110 lb 4 oz~
+Max load/shelf: 55 lb 2 oz~
+
+
+Width: 46 cm~
+Depth: 70 cm~
+Min. height: 71 cm~
+Max. height: 93 cm~
+Max. load: 50 kg~
+Max load/shelf: 25 kg</string>
 			<key>Image</key>
-			<string>artur.png</string>
+			<string>http://www.ikea.com/us/en/images/products/vika-artur-trestle-with-shelf__0137982_PE296875_S4.JPG</string>
 			<key>Name</key>
 			<string>VIKA Artur</string>
 			<key>Reviews</key>
@@ -101,9 +148,24 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Depth: 25 5/8 &quot;~
+Max. height: 48 3/8 &quot;~
+Seat width: 20 1/2 &quot;~
+Seat depth: 17 3/4 &quot;~
+Min. seat height: 17 3/4 &quot;~
+Max. seat height: 22 7/8 &quot;~
+Max. load: 242 lb 8 oz~
+
+
+Depth: 65 cm~
+Max. height: 123 cm~
+Seat width: 52 cm~
+Seat depth: 45 cm~
+Min. seat height: 45 cm~
+Max. seat height: 58 cm~
+Max. load: 110 kg</string>
 			<key>Image</key>
-			<string>malkolm.png</string>
+			<string>http://www.ikea.com/us/en/images/products/malkolm-swivel-chair__0120246_PE276706_S4.JPG</string>
 			<key>Name</key>
 			<string>Malkolm</string>
 			<key>Reviews</key>
@@ -120,9 +182,26 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Width: 21 5/8 &quot;~
+Depth: 21 5/8 &quot;~
+Max. height: 34 5/8 &quot;~
+Seat width: 17 3/4 &quot;~
+Seat depth: 18 1/2 &quot;~
+Min. seat height: 16 1/2 &quot;~
+Max. seat height: 20 7/8 &quot;~
+Max. load: 242 lb 8 oz~
+
+
+Width: 55 cm~
+Depth: 55 cm~
+Max. height: 88 cm~
+Seat width: 45 cm~
+Seat depth: 47 cm~
+Min. seat height: 42 cm~
+Max. seat height: 53 cm~
+Max. load: 110 kg</string>
 			<key>Image</key>
-			<string>gregor.png</string>
+			<string>http://www.ikea.com/us/en/images/products/gregor-swivel-chair__0113408_PE265583_S4.JPG</string>
 			<key>Name</key>
 			<string>Gregor</string>
 			<key>Reviews</key>
@@ -139,9 +218,18 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Width: 31 1/8 &quot;~
+Depth: 15 3/8 &quot;~
+Height: 58 5/8 &quot;~
+Max load/shelf: 29 lb~
+
+
+Width: 79 cm~
+Depth: 39 cm~
+Height: 149 cm~
+Max load/shelf: 13 kg</string>
 			<key>Image</key>
-			<string>expedit.png</string>
+			<string>http://www.ikea.com/us/en/images/products/expedit-shelving-unit__0115209_PE268430_S4.JPG</string>
 			<key>Name</key>
 			<string>Expedit</string>
 			<key>Reviews</key>
@@ -158,9 +246,16 @@
 		</dict>
 		<dict>
 			<key>Detail</key>
-			<string>This piece is the perfect fit for any kitchen</string>
+			<string>Width: 27 1/2 &quot;~
+Depth: 19 5/8 &quot;~
+Height: 28 3/8 &quot;~
+
+
+Width: 70 cm~
+Depth: 50 cm~
+Height: 72 cm</string>
 			<key>Image</key>
-			<string>laiva.png</string>
+			<string>http://www.ikea.com/us/en/images/products/laiva-desk__0104919_PE252089_S4.JPG</string>
 			<key>Name</key>
 			<string>Laiva</string>
 			<key>Reviews</key>
