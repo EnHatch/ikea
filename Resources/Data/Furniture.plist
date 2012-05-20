@@ -178,6 +178,8 @@ Max. load: 110 kg</string>
 			<string>http://www.ikea.com/us/en/images/products/malkolm-swivel-chair__0120246_PE276706_S4.JPG</string>
 			<key>Name</key>
 			<string>Malkolm</string>
+			<key>Barcode</key>
+			<string>EAN-13:0082666732204</string>
 			<key>Reviews</key>
 			<array>
 				<dict>
