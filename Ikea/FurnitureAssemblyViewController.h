@@ -30,7 +30,6 @@
 
 - (IBAction)prevButtonWasPressed:(id)sender;
 - (IBAction)nextButtonWasPressed:(id)sender;
-- (IBAction)infoButtonWasPressed:(id)sender;
 - (IBAction)playButtonWasPressed:(id)sender;
 - (IBAction)singleTap:(id)sender;
 - (IBAction)hideNavigationBar:(id)sender;
