@@ -18,6 +18,7 @@
 
 @property (nonatomic, retain) Isgl3dIkeaCameraController * cameraController;
 @property (nonatomic, retain) NSArray *modelNames;
+@property NSInteger modelIndex;
 
 - (id)initWithModelNames:(NSArray *)modelNames;
 

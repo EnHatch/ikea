@@ -113,6 +113,8 @@
 
     [productIV setImageWithURL:[NSURL URLWithString:[item objectForKey:@"Image"]] placeholderImage:[UIImage imageNamed:@"44-26.jpg"]];
     productLabel.text = [item objectForKey:@"Name"];
+    priceLabel.text = [NSString stringWithFormat:@"$%@", [item objectForKey:@"Price"]];
+    timeLabel.text = [item objectForKey:@"Time"];
     
     return cell;
 }
